@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_back2"
+    android:orientation="vertical">
+
+    <!--<com.iyuba.toeiclistening.widget.TitleBar-->
+    <!--android:id="@+id/title_bar"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="wrap_content" />-->
+
+    <RelativeLayout
+        android:id="@+id/r1"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:shadowColor="#ff000000"
+            android:shadowDx="3.0"
+            android:shadowDy="3.0"
+            android:shadowRadius="3.0"
+            android:text="资讯"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#ffffff" />
+
+    </RelativeLayout>
+
+    <com.iyuba.toeiclistening.widget.PullToRefreshListView
+        android:id="@+id/blogslist"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="#dcdcdc"
+        android:dividerHeight="1dip"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:textIsSelectable="true" />
+</LinearLayout>

@@ -1,0 +1,20 @@
+<resources>
+
+    <string name="app_name">HeadNewsLib</string>
+    
+    <string name="server_error">Oops, failed to connect the server, please try later.</string>
+    <string name="network_ungeilivable">The network connection is terrible!</string>
+    <string name="discover_headline">Headline</string>
+
+    <!-- headline -->
+    <string name="pulldown">Pull down to refresh</string>
+    <string name="pulldown_refreshing">Refreshing</string>
+    <string name="pulldown_release">Release to get new data</string>
+    <string name="pullup">Pull up to load</string>
+    <string name="pullup_loading">Loading</string>
+    <string name="pullup_release">Release to load more data</string>
+    <string name="latestdata_hint">Data is latest</string>
+    <string name="nomoredata_hint">No more data</string>
+    <string name="lastupdatetime_label">Last Updated:</string>
+
+</resources>

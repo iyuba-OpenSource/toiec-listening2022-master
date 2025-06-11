@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items>
+    <item
+        name="@string/only_vip_one_month"
+        month="1"
+        price="30"
+        productId="10" />
+    <item
+        name="@string/only_vip_six_month"
+        month="6"
+        price="69"
+        productId="10" />
+    <item
+        name="@string/only_vip_twelve_month"
+        month="12"
+        price="99"
+        productId="10" />
+    <item
+        name="@string/only_vip_36_month"
+        month="36"
+        price="199"
+        productId="10" />
+</items>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!--原来有背景 ic_player_pre-->
+     <item android:state_focused="true" android:drawable="@drawable/ic_player_pres"/>
+    <item android:state_pressed="true" android:drawable="@drawable/ic_player_pres"/>
+    <item android:state_selected="true" android:drawable="@drawable/ic_player_pres"/>
+    <item android:drawable="@drawable/ic_player_pres"/>
+
+</selector>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/delete_test_relativelayout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/navigate_style" >
+
+        <Button
+            android:id="@+id/delete_test_button_back"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/button_back" />
+
+        <TextView
+            style="@style/TitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/delete_test_title" />
+        <Button
+            style="@style/ButtonText"
+            android:layout_width="55dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button_them_bg"
+            android:text="@string/collection_del"
+            android:id="@+id/delete_data_edit"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/delete_test_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/delete_test_tip"
+        android:textSize="18sp" 
+        android:layout_below="@id/delete_test_relativelayout"/>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/delete_test_tip"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <ListView
+        	android:layout_width="fill_parent"
+        	android:layout_height="fill_parent"
+        	android:layout_margin="1dp"
+        	android:id="@+id/delete_test_list"
+       	 	android:divider="@color/border"
+        	android:dividerHeight="1dp"
+        	android:background="@drawable/shape_setting_panel_background" />   
+    </RelativeLayout>
+
+</RelativeLayout>

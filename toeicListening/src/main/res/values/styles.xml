@@ -1,0 +1,143 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <!--<style name="AppBaseTheme" parent="android:Theme.Light">-->
+    <style name="AppBaseTheme" parent="@style/Theme.AppCompat.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!--colorPrimaryDark  colorAccent
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- &lt;!&ndash; Application theme. &ndash;&gt;
+     <style name="AppTheme.Base" parent="AppBaseTheme">
+         &lt;!&ndash; All customizations that are NOT specific to a particular API-level can go here. &ndash;&gt;
+     </style>-->
+
+    <!-- 鏍囬鐨凾ext瀛椾綋 -->
+    <style name="TitleText" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <!-- title鐣岄潰閲岄潰鐨則itle瀛椾綋 -->
+    <style name="TitleName" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!-- 鍚姏闂鐨勯鐩瓧浣� -->
+    <style name="QuestionTitle" parent="android:Widget.TextView">
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <!-- 鍚姏閫夐」button閲岄潰鐨勫瓧浣� -->
+    <style name="OptionButton" parent="android:Widget.Button">
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <!-- 鍚姏瀵硅瘽鐨勫唴鍚屽瓧浣� -->
+    <style name="QuestionContent" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/orange</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!-- button閲岄潰text鐨勫瓧浣� -->
+    <style name="ButtonText" parent="android:Widget.Button">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!-- 鑷畾涔塪ialog -->
+    <style name="Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <!--璁剧疆閲岄潰鐨勬爣棰樺瓧浣�-->
+    <style name="SetTitle" parent="android:Widget.TextView">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/set_text</item>
+        <item name="android:layout_marginLeft">18dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+    <!--璁剧疆閲岄潰鐨刬tem瀛椾綋-->
+    <style name="SetItems" parent="android:Widget.TextView">
+        <item name="android:layout_margin">10dp</item>
+
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!-- checkBox鏍峰紡 -->
+    <style name="MyCheckBox" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/checkbox</item>
+    </style>
+
+    <style name="editTextTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:textColorPrimaryInverse">@color/blue</item>
+        <item name="android:background">@color/blue</item>
+
+    </style>
+    <!--閫氱煡鏍忕殑棰樼洰瀛椾綋鏍煎紡  -->
+    <style name="NotificationText" parent="android:TextAppearance.StatusBar.EventContent" />
+    <!--閫氱煡鏍忛鐩唴瀛椾綋鐨勫唴瀹规牸寮�  -->
+    <style name="NotificationTitle" parent="android:TextAppearance.StatusBar.EventContent.Title" />
+    <!-- 鑱婂ぉ鐣岄潰 -->
+    <style name="ChattingUISplit">
+        <item name="android:textSize">13.0dip</item>
+        <item name="android:textColor">#ff56616c</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:background">@null</item>
+        <item name="android:paddingTop">11.0dip</item>
+        <item name="android:paddingBottom">6.0dip</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="ChattingUIText">
+        <item name="android:textSize">15.0dip</item>
+        <item name="android:textColor">#ff000000</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxWidth">200.0dip</item>
+    </style>
+
+    <style name="dialogStyle">
+
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+
+    <style name="AnimBottom" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+    </style>
+
+    <style name="TransparentDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@color/transparent</item>
+    </style>
+
+
+    <style name="Theme.WELCOME" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
+
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges
+        </item>
+
+        <item name="android:windowBackground">@drawable/bt_welcome</item>
+        <item name="android:windowTranslucentStatus">true</item>
+<!--        <item name="android:windowBackground">@color/colorPrimary</item>-->
+
+    </style>
+</resources>

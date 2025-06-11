@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:width="1080dp"
+        android:height="1920dp"
+        android:drawable="@android:color/white">
+
+    </item>
+
+    <item android:top="-200dp">
+        <bitmap
+            android:antialias="true"
+            android:dither="true"
+            android:filter="true"
+            android:gravity="center"
+            android:src="@mipmap/ic_lanucher_toeic" />
+    </item>
+
+    <item>
+        <bitmap
+            android:antialias="true"
+            android:dither="true"
+            android:filter="true"
+            android:gravity="bottom|center_horizontal"
+            android:src="@mipmap/splash_ad_bottom" />
+    </item>
+
+
+</layer-list>

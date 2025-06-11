@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="60dip"
+    android:baselineAligned="false"
+    android:gravity="center_vertical" 
+    android:background="@drawable/item_select">
+
+    <FrameLayout
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip" >
+
+        <ImageView
+            android:id="@+id/messageletter_portrait"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:contentDescription="@string/pic"
+            android:scaleType="centerCrop"
+            android:src="@drawable/defaultavatar" />
+
+        <ImageView
+            android:id="@+id/isNew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/isnew" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="0dip"
+        android:layout_height="60dip"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="30dip" >
+
+            <TextView
+                android:id="@+id/messageletter_username"
+                android:layout_width="wrap_content"
+                android:layout_height="30dip"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/messageletter_pmnum"
+                android:layout_width="wrap_content"
+                android:layout_height="30dip"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:textColor="#000000"
+                android:textSize="16sp" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/messageletter_dateline"
+                android:layout_width="0dp"
+                android:layout_height="30dip"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:gravity="right|center_vertical"
+                android:textColor="#000000" >
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="30dip"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/messageletter_lastmessage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/text_gray_color" />
+
+            <ImageView
+                android:layout_width="15dip"
+                android:layout_height="15dip"
+                android:layout_margin="5dip"
+                android:background="@drawable/go"
+                android:focusable="false"
+                android:gravity="center" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

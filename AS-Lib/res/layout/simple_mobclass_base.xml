@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/lib/com.google.ads"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ViewFlipper
+        android:id="@+id/VFCoursePicture"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <RelativeLayout
+            android:id="@+id/RL_course_pictures"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true" >
+
+            <ImageView
+                android:id="@+id/course_pictures"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+        </RelativeLayout>
+    </ViewFlipper>
+
+    <RelativeLayout
+        android:id="@+id/RL_course_title"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:background="#c4000000" >
+
+        <Button
+            android:id="@+id/mobClassBaseBtnBack"
+            android:layout_width="8dp"
+            android:layout_height="16dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/mobbase_back_button_normal" />
+
+        <TextView
+            android:id="@+id/tv_mobclassBaseTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/mobClassBaseBtnBack"
+            android:text="当前课程的标题"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:id="@+id/RL_mobclassBaseCurAllPics"
+            android:layout_width="140dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp" >
+
+            <TextView
+                android:id="@+id/tv_mobclassBaseCurPicsTip"
+                android:layout_width="75dp"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true"
+                android:text="当前播放"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_mobclassBaseCurPics"
+                android:layout_width="20dp"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_mobclassBaseCurPicsTip"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_mobclassBaseAllPics"
+                android:layout_width="30dp"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_mobclassBaseCurPics"
+                android:text="/27"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_mobclassBaseCurPicsPage"
+                android:layout_width="15dp"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_mobclassBaseAllPics"
+                android:text="页"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:alpha="0.7"
+        android:background="@color/colorPrimary"
+        android:padding="5dp"
+        android:text="00:00/00:00"
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
+
+    <RelativeLayout
+        android:id="@+id/all_PlayBar"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true" >
+
+        <RelativeLayout
+            android:id="@+id/title_base_relativelayout_play_control"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:background="#c4000000" >
+
+            <RelativeLayout
+                android:id="@+id/LL_Button_Play"
+                android:layout_width="120dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp" >
+
+                <Button
+                    android:id="@+id/audio_pre"
+                    android:layout_width="22dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/prepic_button" />
+
+                <Button
+                    android:id="@+id/audio_next"
+                    android:layout_width="22dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/nextpic_button" />
+
+                <Button
+                    android:id="@+id/audio_play"
+                    android:layout_width="22dp"
+                    android:layout_height="24dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/mob_pause_button" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textView_curtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/textView_alltime"
+                android:text="00:00"
+                android:textColor="#ececec" />
+
+            <TextView
+                android:id="@+id/textView_alltime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:text="/00:00"
+                android:textColor="#ececec" />
+
+            <SeekBar
+                android:id="@+id/small_seekBar_player"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@id/textView_curtime"
+                android:layout_toRightOf="@id/LL_Button_Play"
+                android:maxHeight="8dp"
+                android:minHeight="8dp"
+                android:progressDrawable="@drawable/seekbar_style"
+                android:thumb="@android:drawable/ic_notification_overlay"
+                android:thumbOffset="0dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

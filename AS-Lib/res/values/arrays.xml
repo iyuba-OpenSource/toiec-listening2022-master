@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="type">
+        <item>原唱+解说模式</item>
+        <item>原唱模式</item>
+        <item>解说模式</item>
+    </string-array>
+    <string-array name="mode">
+        <item>单曲循环</item>
+        <item>列表循环播放</item>
+        <item>随机播放</item>
+    </string-array>
+    <string-array name="gender">
+        <item>男</item>
+        <item>女</item>
+    </string-array>
+    <string-array name="occupation">
+        <item>学生</item>
+        <item>上班族</item>
+    </string-array>
+    <string-array name="education">
+        <item>小学</item>
+        <item>初中</item>
+        <item>高中</item>
+        <item>中等专业学校</item>
+        <item>大学专科</item>
+        <item>本科</item>
+        <item>硕士</item>
+        <item>博士</item>
+    </string-array>
+    <string-array name="more_oper">
+        <item>分享当前篇目</item>
+        <item>应用播放设置</item>
+    </string-array>
+    <string-array name="level">
+        <item>书童</item>
+        <item>童生</item>
+        <item>秀才</item>
+        <item>举人</item>
+        <item>解元</item>
+        <item>贡士</item>
+        <item>进士</item>
+        <item>探花</item>
+        <item>榜眼</item>
+        <item>状元</item>
+    </string-array>
+
+    <string-array name="choose_pic">
+        <item>拍照</item>
+        <item>相册选取</item>
+    </string-array>
+
+    <string-array name="file_op">
+        <item>重 命 名</item>
+        <item>复      制</item>
+        <item>剪      切</item>
+        <item>删      除</item>
+        <item>信      息</item>
+    </string-array>
+
+    <string-array name="choose_delete">
+        <item>删除</item>
+        <item>查看</item>
+    </string-array>
+
+    <string-array name="choose_delete2">
+        <item>删除</item>
+    </string-array>
+
+    <string-array name="q_type">
+        <item>全部</item>
+        <item>口语</item>
+        <item>听力</item>
+        <item>阅读</item>
+        <item>写作</item>
+        <item>翻译</item>
+        <item>单词</item>
+        <item>语法</item>
+        <item>其他</item>
+    </string-array>
+
+
+    <string-array name="q_type2">
+        <item>全部</item>
+        <item>未回复</item>
+        <item>已回复</item>
+
+    </string-array>
+
+    <string-array name="language">
+        <item>跟随系统</item>
+        <item>简体中文</item>
+        <item>English</item>
+    </string-array>
+    <string-array name="more_oper_favor">
+        <item>分享当前篇目</item>
+        <item>应用播放设置</item>
+        <item>与播音交流聊天</item>
+        <item>为当前篇目纠错</item>
+    </string-array>
+    <string-array name="download">
+        <item>是</item>
+        <item>否</item>
+    </string-array>
+
+    <string-array name="pay_methods">
+        <item>支付宝支付</item>
+        <item>微信支付</item>
+        <!-- <item>银行卡支付</item>-->
+    </string-array>
+
+    <string-array name="pay_methods_images">
+        <item>@drawable/pay_zhifubao_icon</item>
+        <item>@drawable/pay_weixin_icon</item>
+        <!--  <item>@drawable/pay_bankcard_icon</item>-->
+    </string-array>
+
+    <string-array name="pay_method_hints">
+        <item>推荐有支付宝账号的用户使用</item>
+        <item>推荐安装微信5.0及以上版本的使用</item>
+        <!--<item>支持储蓄卡信用卡，无需开通网银</item>-->
+    </string-array>
+
+    <string-array name="vip_function_name">
+        <item>@string/vip_function_1</item>
+        <item>@string/vip_function_2</item>
+        <item>@string/vip_function_3</item>
+        <item>@string/vip_function_4</item>
+        <item>@string/vip_function_5</item>
+        <item>@string/vip_function_6</item>
+        <item>@string/vip_function_7</item>
+        <item>@string/vip_function_8</item>
+        <item>@string/vip_function_9</item>
+    </string-array>
+
+    <string-array name="vip_function_icon">
+        <item>@drawable/ic_vip_function1</item>
+        <item>@drawable/ic_vip_function2</item>
+        <item>@drawable/ic_vip_function3</item>
+        <item>@drawable/ic_vip_function4</item>
+        <item>@drawable/ic_vip_function5</item>
+        <item>@drawable/ic_vip_function6</item>
+        <item>@drawable/ic_vip_function7</item>
+        <item>@drawable/ic_vip_function8</item>
+        <item>@drawable/ic_vip_function9</item>
+    </string-array>
+
+</resources>

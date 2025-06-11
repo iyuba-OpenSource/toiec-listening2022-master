@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <RelativeLayout
+        android:id="@+id/RL_Title_Question"
+        android:layout_width="fill_parent"
+        android:layout_height="20dp"
+        android:background="@drawable/question_title"/>
+	<ListView 
+	    android:id="@+id/title_q_list"
+	    android:layout_width="fill_parent"
+	    android:layout_height="match_parent"
+	    android:layout_below="@id/RL_Title_Question"
+	    android:divider="#dcdcdc"
+	    android:dividerHeight="1dp"
+	    android:fadingEdge="none"
+	    android:scrollingCache="false"/>
+</RelativeLayout>

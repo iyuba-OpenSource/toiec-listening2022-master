@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary">
+
+        <Button
+            android:id="@+id/btnTestBack"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/main_back_button" />
+
+        <TextView
+            android:id="@+id/test_title"
+            style="@style/TitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/text3" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/test_list"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:divider="#dcdcdc"
+        android:dividerHeight="1dp"
+        android:fadingEdge="none"
+        android:listSelector="@drawable/test_list_background"
+        android:scrollingCache="false" />
+</LinearLayout>

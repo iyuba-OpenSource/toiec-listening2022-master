@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry exported="true" kind="lib" path="E:/iyubaWork/iyuba jar&apos;s/android-support-v4.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/iyubaWork/iyuba jar&apos;s/com.umeng.message.lib.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/iyubaWork/iyuba jar&apos;s/GoogleAdMobAdsSdk-6.4.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/iyubaWork/iyuba jar&apos;s/locSDK_3.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/iyubaWork/iyuba jar&apos;s/umeng-analytics-v5.2.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/iyubaWork/有道SDK/youdaosdk-3.7.2.jar"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

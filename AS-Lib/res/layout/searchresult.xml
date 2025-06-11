@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical" >
+
+       <Button
+            android:id="@+id/button_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/lib_back_button" />
+
+        <TextView
+            android:id="@+id/login_text"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/social_search"
+            android:textAppearance="?android:attr/textAppearanceLargeInverse"
+            android:textColor="#ffffff" >
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_search"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#e0e8ed"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip" >
+
+        <Button
+            android:id="@+id/findCancel"
+            android:layout_width="70dip"
+            android:layout_height="37dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button_background"
+            android:text="@string/social_search"
+            android:textColor="#ffffff" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="35dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toLeftOf="@+id/findCancel"
+            android:background="@drawable/searchbox" >
+
+            <Button
+                android:id="@+id/search_icon"
+                android:layout_width="27dip"
+                android:layout_height="27dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/search_icon" />
+
+            <EditText
+                android:id="@+id/edittext"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/search_icon"
+                android:background="#00000000"
+                android:hint="@string/social_input_uname"
+                android:imeOptions="actionSend"
+                android:singleLine="true"
+                android:textColor="#dcdcdc"
+                android:textCursorDrawable="@null" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:src="#b1b6b9" />
+
+    <TextView
+        android:id="@+id/shake_it"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:text="@string/social_shake_find_more"
+        android:textSize="26sp" />
+
+    <ListView
+        android:id="@+id/findresult"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="#b1b6b9"
+        android:dividerHeight="1dp"
+        android:visibility="gone" >
+    </ListView>
+
+</LinearLayout>

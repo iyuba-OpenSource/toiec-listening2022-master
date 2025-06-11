@@ -1,0 +1,17 @@
+eclipse.preferences.version=1
+encoding//src/com/iyuba/core/common/network/NetworkStateCheck.java=UTF-8
+encoding//src/com/iyuba/core/common/protocol/BaseHttpRequest.java=UTF-8
+encoding//src/com/iyuba/core/common/protocol/BaseHttpResponse.java=UTF-8
+encoding//src/com/iyuba/core/common/protocol/BaseXMLRequest.java=UTF-8
+encoding//src/com/iyuba/core/common/protocol/ErrorResponse.java=UTF-8
+encoding//src/com/iyuba/core/common/sqlite/ImportLibDatabase.java=UTF-8
+encoding//src/com/iyuba/core/common/sqlite/db/DatabaseService.java=UTF-8
+encoding//src/com/iyuba/core/common/sqlite/op/BaseOP.java=UTF-8
+encoding//src/com/iyuba/core/common/util/Expression.java=UTF-8
+encoding//src/com/iyuba/core/common/widget/circularimageview/CircularImageView.java=UTF-8
+encoding//src/com/iyuba/core/me/sqlite/mode/Emotion.java=UTF-8
+encoding//src/com/iyuba/core/microclass/fragment/MobClassListFragment.java=UTF-8
+encoding//src/com/iyuba/core/microclass/fragment/MobClassListFragment2.java=UTF-8
+encoding//src/com/iyuba/core/microclass/sqlite/mode/TestRecord.java=UTF-8
+encoding//src/com/iyuba/core/teacher/activity/SettingActivity.java=UTF-8
+encoding/<project>=UTF-8

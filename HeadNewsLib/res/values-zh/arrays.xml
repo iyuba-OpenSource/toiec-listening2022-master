@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="headline_category_title">
+        <item>头条</item>
+        <item>校园</item>
+        <item>娱乐</item>
+        <item>科技</item>
+        <item>体育</item>
+        <item>职场</item>
+        <item>政治</item>
+        <item>经济</item>
+        <item>文化</item>
+        <item>生活</item>
+        <item>大国崛起</item>
+    </string-array>
+    
+    <integer-array name="headline_category_id">
+        <item>119</item>
+        <item>120</item>
+        <item>121</item>
+        <item>122</item>
+        <item>123</item>
+        <item>124</item>
+        <item>125</item>
+        <item>126</item>
+        <item>127</item>
+        <item>128</item>
+        <item>228</item>
+    </integer-array>
+</resources>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_collectedquestions_in"
+    android:layout_width="fill_parent"
+    android:layout_height="65dp"
+    android:background="@drawable/test_list_background" >
+    <ImageView 
+        android:id="@+id/collectedquestions_in_delete"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/rem_sns"/>
+	<RelativeLayout 
+	    android:id="@+id/ll_test"
+	    android:layout_width="wrap_content"
+	    android:layout_height="fill_parent"
+	    android:layout_centerInParent="true"
+	    android:layout_marginRight="30dp"
+	    android:layout_marginLeft="10dp"
+	    android:layout_toRightOf="@id/collectedquestions_in_delete">
+	    <TextView 
+	        android:id="@+id/collectedquestions_in_title_name"
+	        android:layout_width="fill_parent"
+	        android:layout_height="35dp"
+	        android:gravity="center"
+	        android:layout_alignParentTop="true"
+	        android:layout_centerHorizontal="true"
+	        android:layout_marginTop="5dp"
+	        android:text="@string/text1"
+	        android:textSize="20sp"
+	        android:singleLine="true"
+	        android:ellipsize="middle"/>
+	    <TextView 
+	        android:id="@+id/collectedquestions_in_title_cond"
+	        android:layout_width="fill_parent"
+	        android:layout_height="25dp"
+	        android:layout_below="@id/collectedquestions_in_title_name"
+	        android:layout_centerHorizontal="true"
+	        android:text="@string/text2"
+	        android:textSize="15sp"
+	        android:gravity="center"/>
+	</RelativeLayout>
+	<ImageView 
+	    android:id="@+id/collectedquestions_in_image"
+	    android:layout_width="15dp"
+	    android:layout_height="15dp"
+	    android:layout_alignParentRight="true"
+	    android:layout_centerVertical="true"
+	    android:layout_marginRight="10dp"
+	    android:src="@drawable/go"/>
+	
+</RelativeLayout>

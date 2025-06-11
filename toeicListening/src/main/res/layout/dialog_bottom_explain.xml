@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="解析"
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:id="@+id/tv_explain_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="这是解析，这是解析，这是解析，这是解析，这是解析，这是解析，这是解析，这是解析"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"/>
+    <TextView
+        android:id="@+id/tv_close"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="关闭"
+        android:textSize="20dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:background="@drawable/shape_blue_btn"/>
+</LinearLayout>

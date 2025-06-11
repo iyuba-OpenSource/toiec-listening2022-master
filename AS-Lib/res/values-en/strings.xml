@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="select_ques_type_close">关闭</string>
+    <string name="select_ques_type">筛选</string>
+    
+    <string name="discover_iyubaac">爱语吧活动</string>
+    <string name="discover_latestac">充值送礼</string>
+    <string name="discover_exgift">积分商城</string>
+    
+    <!-- 微课中用到的String -->
+    <string name="already_load_all_comments">已加载全部评论</string>
+    
+    <string name="course_list">课程目录</string>
+    <string name="course_desc">课程简介</string>
+    <string name="course_comment">评论</string>
+    
+    <string name="microclass_all_courses">全部课程</string>
+    <string name="microclass_fav_courses">我的课程</string>
+    <string name="microclass_offline_cache">离线缓存</string>
+    <string name="microclass_me">我</string>
+    <string name="microclass_setting">设置</string>
+    
+    <!-- MobClassListFragment中的String字段 -->
+    
+    <string name="mobile_class">微课</string>
+    <string name="micro_class">托业听力</string>
+    <string name="courseslist_downloading">已加入下载队列</string>
+    <string name="courseslist_downloaderror">下载错误，请稍后再试！</string>
+    
+    <string name="study_all_loaded">已加载全部评论</string>
+    <string name="study_no_comment">目前还没有评论</string>
+    <string name="study_input_comment">请输入评论内容</string>
+    
+    <string name="play_check_network">请检查网络是否可用！</string>
+    
+    <string name="proName">SurfingNearby_Android</string>
+    <string name="proVer">v2.5.0.0.120116_Android</string>
+    <string name="minName">SurfingNearby</string>
+    <string name="minVer">2.0</string>
+    <string name="pubDate">20120116</string>
+    <string name="runEnv_name">Android</string>
+    <string name="runEnv_vendor">google</string>
+    <string name="runEnv_MIDP">2.0</string>
+    <string name="runEnv_CLDC">1.1</string>
+    <string name="language">Chinese</string>
+    <string name="PRODUCTID">HandBeside_an</string>
+    <string name="APK_NAME">SurfingNearby.apk</string>
+    <string name="ssite_code">10</string>
+    <string name="dialog_title_normal">爱语吧提示</string>
+    <string name="error_net_unavailable">网络错误，无法和服务器取得联系\n按\"退出\"直接退出酣逗畅游，稍后请重试</string>
+    <string name="error_net_wifi_other">网络错误，无法和服务器取得联系\n按\"重设网络\"尝试选择其他Wifi接入点，稍后请重试\n按\"退出\"直接退出酣逗畅游，稍后请重试</string>
+    <string name="error_net_wifi">网络错误，无法和服务器取得联系\n按\"重设网络\"尝试使用Wifi接入点，稍后请重试\n按\"退出\"直接退出酣逗畅游，稍后请重试</string>
+    <string name="error_net_wifi_off">网络错误，无法和服务器取得联系\n按\"重设网络\"选择其他Wifi接入点，稍后请重试\n按\"关闭Wifi\"关闭Wifi尝试使用3G/GPRS\n按\"退出\"直接退出酣逗畅游，稍后请重试</string>
+    <string name="dialog_button_exit">退出软件</string>
+    <string name="dialog_button_resetNet">重设网络</string>
+    <string name="dialog_button_offWifi">关闭Wifi</string>
+
+    <!-- 通用 -->
+
+    <string name="no_login">Sorry, you are currently logged out. Please log in！</string>
+    <string name="check_network">Network connection is abnormal or the server is busy, please try again later. </string>
+    <string name="check_gps">Please open the GPS to get location information! </string>
+    <string name="action_fail">Operation failed, please try again! </string>
+    <string name="send">Send</string>
+    <string name="delete">Delete</string>
+    <string name="complete">Complete</string>
+    <string name="reply">Reply</string>
+    <string name="pic">Picture</string>
+    <string name="making">Coming soon…</string>
+    <string name="never_update">Never updated</string>
+    <string name="exit">Exit</string>
+    <string name="logout">Log out</string>
+    <!-- main -->
+    <string name="discover_text">Discover</string>
+    <string name="me_text">Me</string>
+    <!-- buy -->
+    <string name="buy_title">Store</string>
+    <string name="buy_buy">Upgrade VIP</string>
+    <string name="buy_remind">Balance：</string>
+    <string name="buy_user"> Current user：</string>
+    <string name="buy_state">User state：</string>
+    <string name="buy_valid">Valid date：</string>
+    <string name="buy_function">Functions available：</string>
+    <string name="buy_function_vips">Vip users enjoy all of the following functions</string>
+    <string name="buy_tobuy">Recharge</string>
+    <string name="buy_refresh">Refresh</string>
+    <string name="buy_success">Payment success, Updating data……</string>
+    <string name="buy_already">You have become a lifelong member of  VIP</string>
+    <string name="buy_explain1">All iyuba softwares are open to VIP members</string>
+    <string name="buy_explain2">VIP rights are only open to this software: </string>
+    <string name="buy_explain3">iyu money</string>
+    <!-- LocalNews -->
+    <string name="collection_title">Local music</string>
+    <string name="favourite_title">Favorite music</string>
+    <string name="heard_title">Music audition</string>
+    <string name="collection_please_select_art">Please chose the article that you want to delete</string>
+    <!-- login -->
+    <string name="login_title">User login</string>
+    <string name="login_remember_pwd">Keep password </string>
+    <string name="login_auto_login">Automatic login</string>
+    <string name="login_check_user_id_null">The user ID cannot be empty</string>
+    <string name="login_check_effective_user_id">Please fill in effective user ID</string>
+    <string name="login_check_user_pwd_null">The user password can not be empty</string>
+    <string name="login_check_user_pwd_constraint">The password is between 6~20 characters</string>
+    <string name="login_faild">Login failed! Please check the network! </string>
+    <string name="login_fail">Login failed, please check the username and password</string>
+    <string name="login_find_password">Forget your password?</string>
+    <string name="login_find_password_web">Forget your password?(Web)</string>
+
+    <string name="login_regist">Register</string>
+    <string name="login_login">Log in</string>
+    <string name="login_unamehint">Please enter user name</string>
+    <string name="login_pwdhint">Please enter password</string>
+    <string name="login_welcome">Welcome back!</string>
+    <!-- doing -->
+    <string name="doing_title">Comments</string>
+    <string name="doing_reply">Comments: </string>
+    <!-- me -->
+    <string name="me_title">Me</string>
+    <string name="me_state_text">Signature</string>
+    <string name="me_attention_text">Follow</string>
+    <string name="me_fans_text">Follower</string>
+    <string name="me_notification_text">Notification</string>
+    <string name="me_message_text">Message Center</string>
+    <string name="me_vip_text">VIP Center</string>
+    <string name="me_over_fix">Word count exceeds the limit</string>
+    <string name="me_music">My music</string>
+    <string name="me_state_success">Mood modifieds successfully</string>
+    <string name="me_state_fail">Fail to modify mood. Please try again</string>
+    <string name="me_view"> people viewed my homepage</string>
+    <string name="me_study_time">Learned:</string>
+    <string name="me_hour"> hour</string>
+    <string name="me_minute"> minute</string>
+    <string name="me_minus"> minus</string>
+    <string name="me_study_position">Ranking:</string>
+    <string name="me_lv">Level:</string>
+    <string name="me_score">Score:</string>
+    <!-- message -->
+    <string name="message_title">Private message</string>
+    <string name="message_hint">Say something…</string>
+    <string name="message_delete">Deleted successfully</string>
+    <string name="message_send">Sent successfully</string>
+    <string name="write_message">Write message</string>
+    <string name="message_add_all">Message loaded successfully</string>
+    <string name="message_content_add_all">All contents loaded successfully</string>
+    <!-- search word -->
+    <string name="search_word_title">Search the word</string>
+    <string name="search_word_hint">Please enter a query</string>
+    <string name="word_title">Word</string>
+    <string name="search_word_do">Search</string>
+    <string name="word_mean">Explain:</string>
+    <string name="word_example">Example:</string>
+    <string name="word_null">Please enter a word and then click the search button:</string>
+    <string name="no_word_example">No examples.We are working on it...</string>
+    <!-- social -->
+    <string name="social_default_state">This guy is lazy, there is no information about him/her</string>
+    <string name="social_add_all">Data loaded successfully</string>
+    <string name="social_distance">Metre</string>
+    <string name="social_sameapp">Same applications:</string>
+    <string name="social_attention">Follow</string>
+    <string name="social_cancle_attention">Unfollow</string>
+    <string name="social_success_attention">Followed successfully</string>
+    <string name="social_failed_attention">Fail to unfollow</string>
+    <string name="social_success_cancle_attention">Unfollow successfully</string>
+    <string name="social_failed_cancle_attention">Fail to unfollow</string>
+    <string name="social_attentioned">You already followed TA</string>
+    <string name="social_user_not_exist">The user does not exist.~~</string>
+    <string name="social_add_failed">Fail to follow</string>
+    <string name="social_friends">Friends</string>
+    <string name="social_no_friends">You still have no friend, try to find some~~~</string>
+    <string name="social_search">Search</string>
+    <string name="social_search_in_friends">Search in friends</string>
+    <string name="social_search_no_result"> Find no related results</string>
+    <string name="social_search_try_again">Try other key words! </string>
+    <string name="social_input_uname">Input username</string>
+    <string name="social_shake_find_more">Try shaking, find more~~~</string>
+    <string name="social_write_letter">Write a message</string>
+    <string name="social_readed">Readed</string>
+    <string name="social_input_message">Enter message</string>
+    <string name="social_load_more">Load more</string>
+    <string name="social_find_friends">Find friends</string>
+    <string name="social_shake_shake">shake shake shake...</string>
+    <string name="social_user_distance">is at a distance of ：</string>
+    <string name="social_user_distance_danwei">metre or so</string>
+    <string name="social_no_similar_user">No similar user~</string>
+    <string name="social_send_message">Send a message</string>
+    <string name="social_add_friend">Add as friend</string>
+    <!-- Pull down to refresh related character resource -->
+    <string name="pull_to_refresh_pull_label">Pull down to refresh</string>
+    <string name="pull_to_refresh_release_label">Loosen to refresh</string>
+    <string name="pull_to_refresh_refreshing_label">Loading...</string>
+    <string name="pull_to_refresh_tap_label">Click refresh</string>
+    <string name="pull_to_refresh_on_refreshing">Loading...</string>
+    <string name="pull_to_refresh_lastest">Latest contents:</string>
+    <string name="pull_to_refresh_footer_pull_label">Pull up to load more</string>
+    <string name="pull_to_refresh_footer_release_label">Release to load more</string>
+    <string name="pull_to_refresh_footer_refreshing_label">Loading...</string>
+    <!-- alertWindow-related string resources -->
+    <string name="alert_title">Hint</string>
+    <string name="alert_exit_content">Downloading, are you sure to exit?</string>
+    <string name="alert_buy_content1">Are you sure to pay&#160;</string>
+    <string name="alert_buy_content2">&#160;Iyubi to buy it?</string>
+    <string name="alert_recharge_content">Your iyu money is insufficient, do you want to recharge?</string>
+    <string name="alert_all_life_vip">Your account is all-life VIP.</string>
+    <string name="alert_net_content">Network unconnected</string>
+    <string name="alert_delete">Are you sure to delete this record?</string>
+    <string name="alert_btn_cancel">Cancle</string>
+    <string name="alert_btn_ok">Ok</string>
+    <string name="alert_btn_set">Settings</string>
+    <string name="alert_btn_net">Connection</string>
+    <string name="alert_btn_recharge">Recharge</string>
+    <string name="alert_btn_exit">Exit</string>
+    <string name="alert_btn_buy">Buy</string>
+    <string name="alert_btn_download">Download</string>
+    <string name="alert_home">Press again to return to the desktop</string>
+    <string name="alert_press">Press again to exit the program</string>
+    <string name="alert_market_error">You currently not installed application market, unable to use this feature.</string>
+    <string name="introduction_this_version">Introduction to the new version</string>
+    <!-- person_detail -->
+    <string name="person_detail_title">Personal details</string>
+    <string name="person_detail_base">Basic information</string>
+    <string name="person_detail_nickname">Nickname</string>
+    <string name="person_detail_edu">Education background</string>
+    <string name="person_detail_college">College</string>
+    <string name="person_detail_corp">Company</string>
+    <string name="person_detail_other">Other</string>
+    <string name="person_detail_feeling">Marriage</string>
+    <string name="person_detail_friend_aim">Aim of making friends</string>
+    <string name="person_detail_intro">Self-introduction</string>
+    <string name="person_detail_interest">Hobbies</string>
+    
+    <!-- file explorer -->
+    <string name="confirm_exit">Are you sure to exit app?</string>
+    <string name="mainmenu_home">main catalog</string>
+    <string name="mainmenu_father">back</string>
+    <string name="mainmenu_refresh">refresh</string>
+    <string name="mainmenu_createdir">new folder</string>
+    <string name="mainmenu_exit">save path</string>
+    <string name="mainmenu_path_save">save</string>
+    <string name="mainmenu_exitnow">back to app</string>
+    <string name="mainmenu_cantwrite">can not write, please change another catalog</string>
+    <string name="file_rename">rename</string>
+    <string name="file_delete">delete</string>
+    <string name="file_info">info</string>
+    <string name="file_cannotopen">can not oper: %1$s</string>
+    <string name="file_exists">file exist！</string>
+    <string name="file_namecannotempty">file name is empty!</string>
+    <string name="file_create_fail">create failed！</string>
+    <string name="file_rename_fail">rename failed！</string>
+    <string name="file_name">file name</string>
+    <string name="file_size">file size</string>
+    <string name="file_contents">file info</string>
+    <string name="file_lastmodified">last update time</string>
+    <string name="file_paste">paste</string>
+    <string name="file_copy">copy</string>
+    <string name="file_move">move</string>
+    <string name="file_create">create</string>
+    <string name="file_copy_fail">copy file failed！</string>
+    <string name="file_move_fail">move file failed！</string>
+    <string name="file_notexists">file doesnot exist！</string>
+    <string name="file_path_ro">this folder is only read, please selete another folder。</string>
+    <string name="file_remove">Folder Move</string>
+    <string name="file_remove_info">the folder is moving, please wait for a while……</string>
+    <string name="file_path_move_success">migrate success</string>
+    <string name="file_path_move_exception">migrate failed, please remove folder manual operation</string>
+    <!-- person_info -->
+    <string name="person_info_title">Edit personal information</string>
+    <string name="person_info_male">Male</string>
+    <string name="person_info_female">Female</string>
+    <string name="person_info_gender">Gender</string>
+    <string name="person_info_birth">Date of birth</string>
+    <string name="person_info_success">Modified successfully</string>
+    <string name="person_info_fail">Fail to modify, please try again</string>
+    <string name="person_info_save">Save</string>
+    <string name="person_info_uploadPic">Upload picture</string>
+    <string name="person_info_local_now">Location</string>
+    <string name="person_info_school">College</string>
+    <string name="person_info_zodiac">Zodiac</string>
+    <string name="person_info_constellation">Constellation</string>
+    <string name="person_info_school_hint">Please enter the name of your school</string>
+    <!-- ground -->
+    <string name="voa_speical">VOA Speical English</string>
+    <string name="voa_cs">VOA English</string>
+    <string name="voa_video">VOA English video</string>
+    <string name="voa_ae">How to say it</string>
+    <string name="voa_bbc">BBC Business English</string>
+    <string name="voa_bbc6">BBC 6 Minute English</string>
+    <string name="voa_bbcnews">BBC News</string>
+    <string name="voa_music">English songs</string>
+    <string name="voa_ted">TED English Speech</string>
+    <string name="voa_word">VOA Word Story</string>
+    <string name="concept1">New Concept English 1</string>
+    <string name="concept2">New Concept English 2</string>
+    <string name="cet_4">CET-4 Listening</string>
+    <string name="cet_6">CET-6 Listening</string>
+    <string name="toelf">TOEFL Listening</string>
+    <string name="toeic">TOEIC Listening</string>
+    <string name="jlpt1">The Japanese-Language Proficiency Test N1 Listening</string>
+    <string name="jlpt2">The Japanese-Language Proficiency Test N2 Listening</string>
+    <string name="jlpt3">The Japanese-Language Proficiency Test N3 Listening</string>
+    <string name="answer">Answer</string>
+    <string name="explain">Explain</string>
+    <string name="your_answer">Your answer:</string>
+    <string name="right_answer">Right answer:</string>
+    <string name="vip_alert">Alert：This function is only for trial in the app store. You have to buy VIP rights to use it in the official edition.。</string>
+    <string name="keys">Key points:</string>
+    <string name="explains">Explain:</string>
+    <string name="knowledges">Knowledge points:</string>
+    <string name="section_c">Fill in the blanks</string>
+    <string name="blank_hint">Please enter your answer</string>
+    <string name="tosingle">Click the content to enter the the test interface</string>
+    <!-- discovery -->
+    <string name="discover_title">Discover</string>
+    <string name="discover_app">Application Store</string>
+    <string name="discover_news">News-series applications</string>
+    <string name="discover_exam">Test-series applications</string>
+    <string name="discover_appall">iyuba applications for Android</string>
+    <string name="discover_mobclass">Mobile Classroom</string>
+    <string name="discover_word">Words Paradise</string>
+    <string name="discover_saying">Classic proverb</string>
+    <string name="discover_collect_word">Words list</string>
+    <string name="discover_search_word">Search a word</string>
+    <string name="discover_friend">Exchanges with friends</string>
+    <string name="discover_search_friend">Find a friend</string>
+    <string name="discover_message">Message Center</string>
+    <string name="discover_vibrate">Shake</string>
+    <!-- saying -->
+    <string name="saying_next">Next</string>
+    <string name="saying_auto">Auto</string>
+    <string name="saying_manul">Manual</string>
+    <!-- word -->
+    <string name="newword_please_select_word">Please select the word you want to delete\</string>
+    <string name="newword_title">Words list</string>
+    <string name="no_new_word">No new word added, you can not delete.</string>
+    <string name="word_add_all">Cloud word list loaded successfully</string>
+    <string name="word_no_data">There is no word in the list, try to add one.</string>
+    <!-- home -->
+    <string name="vip_title">VIP center</string>
+    <string name="home_title">Personal homepage</string>
+    <string name="person_home_fail">Fail to refresh or you haven\'t buy the VIP of this software</string>
+    <string name="person_vip_limit">VIP has expired</string>
+    <string name="person_ad">Get rid of ads</string>
+    <string name="person_ad_content">No more annoying ads when you are enjoying the program</string>
+    <string name="person_word">New added words</string>
+    <string name="person_word_content">Help you add unknown words when you are learning.</string>
+    <string name="person_read">Listen and repeat</string>
+    <string name="person_read_content">Follow the pure English to speak out, improve you spoken English</string>
+    <string name="person_original">Synchronous text</string>
+    <string name="person_original_content">There is original text to help you to learn when the audio is speaking too fast</string>
+    <string name="person_down">Download limits</string>
+    <string name="person_down_content">A limited number of local audio? VIP help you to solve this problem</string>
+    <string name="person_award">Accelerate download</string>
+    <string name="person_award_content">Vip users can enjoy the special download line 10 times faster than the ordinary user</string>
+    <string name="person_common_user">Common user</string>
+    <string name="person_not_vip">You are not VIP yet</string>
+    <string name="person_login">Please log in first</string>
+    <string name="person_detail">Details</string>
+    <string name="person_message">Send message</string>
+    <string name="person_attention">Follow</string>
+    <string name="person_attention_already">Followed</string>
+    <string name="person_attention_mutually">Mutual follow</string>
+    <string name="person_fix">Modify infomation</string>
+    <string name="person_fans_count">Follower </string>
+    <string name="person_attention_count">Follow</string>
+    <string name="person_attention_relieve_alert">Are you sure not to follow him?</string>
+    <!-- Registration interface-related string resources -->
+    <string name="regist_title">User registration</string>
+    <string name="regist_user_id_hint">3~20 English, number or Chinese characters</string>
+    <string name="regist_user_pwd_hint">6~20 English, number or underline</string>
+    <string name="regist_user_repwd_hint">Confirm the password</string>
+    <string name="regist_email_hint">Please enter your frequently-used email, it can be used to retrieve your password</string>
+    <string name="regist_check_username_1">3~20 characters</string>
+    <string name="regist_check_username_2">Phone number or email can not be used as user name</string>
+    <string name="regist_check_userpwd_1">6~20 characters</string>
+    <string name="regist_check_userpwd_2">Uppercase and lowercase letters, numbers, symbols</string>
+    <string name="regist_check_reuserpwd">The two passwords do not match!</string>
+    <string name="regist_check_email_1">The user email cannot be empty</string>
+    <string name="regist_check_email_2">Please fill in an effective email</string>
+    <!-- Regist -->
+    <string name="regist_email_used">The e-mail has been registered</string>
+    <string name="regist_operating">In operation, please wait</string>
+    <string name="regist_userid_exist">The account already exist.</string>
+    <string name="regist_phone_getcode">Acquire verification Code</string>
+    <string name="regist_phone_verifycode">Verifying</string>
+    <string name="regist_phone_toemail">E-mail registration></string>
+    <string name="regist_phone_inputphone">Please enter your phone number</string>
+    <string name="regist_phone_inputcode">Enter the verification Code</string>
+    <string name="regist_phone_numbsended">Verification Code on the way, please wait…</string>
+    <string name="regist_phone_numberr">Please enter correct phone number</string>
+    <string name="regist_phone_serverr">The server failed in sending SMS, please try again</string>
+    <string name="regist_phone_vrerr">Fail to verify, please try again!</string>
+    <string name="regist_phone_codeerr">Wrong verification Code！</string>
+    <string name="regist_phone_codepass">Verification Code has expired, please try again</string>
+    <string name="regist_phone_username">Using 3~20 English, numbers or Chinese characters to name the user</string>
+    <string name="regist_phone_paswd">Using 6~20 English, numbers or underlines to form the password</string>
+    <string name="regist_phone_used">This number has been registered</string>
+    <string name="regist_success">Registered successfully! Welcome to iyuba!</string>
+    <string name="regist_fail">Fail to register, please try again</string>
+    <string name="regist_phone_tocomplete">Please fill in username and password to complete the registration</string>
+    <string name="regist_waitcode">Retry after _seconds</string>
+    <!-- uploadimage -->
+    <string name="uploadimage">Upload image</string>
+    <string name="uploadimage_default">Example of image</string>
+    <string name="uploadimage_text">Upload a nice image and show your personality</string>
+    <string name="uploadimage_comlete">Comlete</string>
+    <string name="uploadimage_bycamera">Shoot with camera</string>
+    <string name="uploadimage_bylocal">Select a local picture</string>
+    <string name="uploadimage_skip">Skip</string>
+    <string name="uploadimage_uploading">Uploading the image, please wait~~~</string>
+    <string name="uploadimage_success">Your image has been uploaded successfully</string>
+    <string name="uploadimage_failupload">Fail to upload, please try again</string>
+    <string name="uploadimage_failmodify">Fail to modify the image, please upload again</string>
+    <!-- hint -->
+    <string name="hint1">Say something..</string>
+    <string name="hint2">Please enter reply content</string>
+    <string name="hint3">Please enter content</string>
+    <!-- other -->
+    <string name="word_add">Add</string>
+    <string name="word_close">Close</string>
+    <string name="loginout_success">Logout successfully！</string>
+    <string name="logout_alert">Enjoy more exciting iYuba service in login state\nSure to exit?</string>
+    <string name="submitting">Submitting,please hold on！</string>
+    <string name="ground_info">From Iyuba APP Ground</string>
+    <!-- play setting -->
+    <string name="setting_play_title">Play settings</string>
+    <string name="setting_base_music_type">Type </string>
+    <string name="setting_base_music_mode">Mode </string>
+    <string name="setting_base_light">Keep Screen Light</string>
+    <string name="setting_base_no_syncho">no synchro(Highlighted area is not centered)</string>
+    <string name="setting_base_auto_syncho">The original synchro(Highlighted area centered)</string>
+    <string name="setting_phone">Phone settings</string>
+    <string name="setting_put_in">Earphones in to play </string>
+    <string name="setting_pull_out">Earphones out to pause</string>
+    <!-- get word -->
+    <string name="play_click_word_text">Click words to check interpretation！</string>
+    <string name="play_please_take_the_word">Please take the word</string>
+    <string name="play_no_word_interpretation">No word interpretation!</string>
+    <string name="play_ins_new_word_success">Add to new word note successfully!</string>
+    <string name="play_ins_new_word_fail">Add to new word note failed, please try again！</string>
+	<string name="cancel">Cancel</string>
+</resources>

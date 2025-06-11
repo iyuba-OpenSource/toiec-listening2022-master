@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <color name="headnewlib_default_bg">#FF9D34</color>
+    <color name="theme_color">#0077d5</color>
+    <color name="background_tab_pressed">#6633B5E5</color>
+    
+    <color name="transparent">#00000000</color>
+    
+    <color name="white">#ffffff</color>
+    
+    <color name="whitesmoke">#f5f5f5</color>
+    <color name="colorPrimary">#2D7BE3</color><!--浅蓝色 主页底部 通用颜色覆盖 0C80FF  339ef0  236496-->
+</resources>

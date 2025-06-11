@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/rl">
+    <RelativeLayout
+        android:id="@+id/login_relativelayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/navigate_style" >
+        <Button
+            android:id="@+id/button_back"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/button_back" />
+        <TextView
+            android:id="@+id/play_title_info"
+            style="@style/TitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/buy_vip_title" />
+    </RelativeLayout>
+    <ScrollView 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/login_relativelayout1">
+        <RelativeLayout
+            android:id="@+id/relativeLayout_Login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="150dp"
+                android:layout_height="75dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/iyubalogo" />
+            <RelativeLayout
+                android:id="@+id/row0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView1"
+                android:gravity="center" >
+
+                  <ImageView 
+                      android:id="@+id/user_pic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                     android:layout_alignParentLeft="true"
+                     android:layout_marginTop="10dp"
+                    android:layout_marginRight="8dp"
+                     android:background="@drawable/user_pic"/>
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/user_pic"
+                    android:layout_alignBaseline="@id/user_pic"
+                    android:layout_marginTop="10dp"
+                    android:text="当前用户："
+                    android:textColor="#8B4513" />
+
+                <TextView
+                    android:id="@+id/buy_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textView1"
+                    android:layout_alignBottom="@+id/textView1"
+                    android:layout_marginLeft="25dp"
+                    android:layout_toRightOf="@+id/textView1"
+                    android:text="魏申鸿"
+                    android:textColor="#8B4513" />
+                <ImageView
+                    android:id="@+id/iyubi_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/user_pic"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/iyubi_icon" />
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView1"
+                    android:layout_toRightOf="@id/iyubi_icon"
+                    android:layout_alignBaseline="@id/iyubi_icon"
+                    android:layout_marginTop="10dp"
+                    android:text="语毕余额："
+                    android:textColor="#8B4513" />
+
+                <TextView
+                    android:id="@+id/buy_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textView2"
+                    android:layout_alignBottom="@+id/textView2"
+                    android:layout_alignLeft="@+id/buy_username"                 
+                    android:text="1000"
+                    android:textColor="#8B4513" />
+            </RelativeLayout>
+            <Button 
+        		android:layout_width="240dp"
+       			android:layout_height="240dp"
+        		android:background="@drawable/buy"
+        		android:id="@+id/buy_vip_button_buy"
+        		android:layout_below="@id/row0"
+        		android:layout_marginTop="10dp"
+        		android:layout_centerHorizontal="true"/>
+            <Button 
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/buy_vip_button_buy"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_them_bg"
+                android:text="购买爱语币"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:id="@+id/buy_iyubi"/>
+            </RelativeLayout>
+                
+    </ScrollView>
+ 
+    <RelativeLayout
+        android:id="@+id/relativeLayout_noLogin"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" >
+        <Button
+            android:id="@+id/button_to_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/collection_no_login" />
+    </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

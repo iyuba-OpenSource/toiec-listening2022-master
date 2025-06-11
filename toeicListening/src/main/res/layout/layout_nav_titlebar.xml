@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout_title_and_back"
+    android:layout_width="fill_parent"
+    android:layout_height="50dp"
+    android:background="@color/blue_bottom">
+    <!--android:background="?attr/titleBarColor" #FE9D3A @color/colorPrimary-->
+    <ImageView
+        android:id="@+id/iv_title_back"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/main_back_button" />
+
+    <TextView
+        android:id="@+id/tv_nav_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffffff" />
+    <!--TextView 更多-->
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/more_layout"
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true">
+
+        <TextView
+            android:id="@+id/tv_web_more"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="更多"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+    </com.balysv.materialripple.MaterialRippleLayout>
+    <!--ImageButton-->
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true">
+        <!--收藏-->
+        <ImageButton
+            android:id="@+id/ibtn_save"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@color/transparent"
+            android:textColor="@color/transparent"
+            android:visibility="gone" />
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+</RelativeLayout>

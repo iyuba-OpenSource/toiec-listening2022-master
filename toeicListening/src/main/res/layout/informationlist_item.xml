@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:paddingRight="10dp"
+    android:background="@drawable/list_item_back">
+    <TextView 
+        android:id="@+id/infoSubject"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:paddingLeft="10dp"
+        android:paddingTop="2dp"
+        android:text="text"
+        android:textSize="20sp"/>
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp">
+        <TextView 
+            android:id="@+id/infoTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12-23 14:58"
+            android:textColor="@color/grey_text"/>
+        
+        <LinearLayout
+            android:id="@+id/read"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical"
+	        android:paddingLeft="80dip"
+	        android:orientation="horizontal"
+	        android:visibility="gone">
+	       <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="已读"
+	            android:textColor="#f05032" />
+	        <ImageView  android:id="@+id/read_yes"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:background="@drawable/right_ok"/>
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical">
+            <ImageView 
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/replyicon"
+                android:visibility="gone">
+            </ImageView>
+            <TextView 
+                android:id="@+id/infoReplyNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

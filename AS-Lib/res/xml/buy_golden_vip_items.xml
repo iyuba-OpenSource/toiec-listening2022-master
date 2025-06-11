@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items>
+    <item
+        name="@string/gold_vip_item_title_1"
+        month="1"
+        price="98"
+        productId="15"/>
+    <item
+        name="@string/gold_vip_item_title_2"
+        month="3"
+        price="198"
+        productId="15"/>
+    <item
+        name="@string/gold_vip_item_title_3"
+        month="6"
+        price="299"
+        productId="15"/>
+    <item
+        name="@string/gold_vip_item_title_4"
+        month="12"
+        price="399"
+        productId="15"/>
+    <!-- 托业听力黄金会员productId 15-->
+</items>

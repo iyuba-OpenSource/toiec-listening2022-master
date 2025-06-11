@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:background="@drawable/microclass_classlist_item_select"
+    android:orientation="horizontal" >
+    
+    <!--  
+    <RelativeLayout 
+        android:id="@+id/RL_coursePackType_list_image"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+        
+        <ImageView
+            android:id="@+id/coursePackType_pic"
+            android:layout_width="100dp"
+            android:layout_height="fill_parent"
+            android:background="@drawable/microclass_mobclasslist_item_image"
+            android:scaleType="fitXY" />
+        
+    </RelativeLayout>
+    -->
+
+    <LinearLayout 
+        android:id="@+id/LL_coursePackType_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+        
+        <RelativeLayout 
+            android:id="@+id/LL_coursePackType_title"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="#0077d5">
+            <RelativeLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+                <ImageView
+		            android:id="@+id/coursePackType_pic"
+		            android:layout_width="30dp"
+		            android:layout_height="30dp"
+		            android:layout_centerVertical="true"
+		            android:layout_marginLeft="5dp"
+		            android:background="@drawable/microclass_packtype_alltype"
+		            android:scaleType="fitXY" />
+	            <TextView
+	                android:id="@+id/coursePackType_title"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_toRightOf="@id/coursePackType_pic"
+	                android:layout_marginTop="10dp"
+	                android:layout_marginLeft="6dp"
+	                android:layout_centerHorizontal="true"
+	                android:layout_centerVertical="true"
+	                android:maxLines="1"
+	                android:textColor="@color/white"
+	                android:text="课程包分类的标题"
+	                android:textSize="20sp" />
+            </RelativeLayout>
+
+            
+
+        </RelativeLayout>
+        
+        <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginBottom="6dp"
+	        android:layout_marginLeft="13dp"
+	        android:layout_marginRight="13dp"
+	        android:layout_marginTop="4dp"
+	        android:gravity="center"
+	        android:orientation="horizontal" 
+	        android:visibility="gone">
+            <TextView
+                android:id="@+id/coursePackTypeDesc_content"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/gray"
+                android:text="课程包分类的详细描述"
+                android:lineSpacingMultiplier="1.2"
+                android:textSize="13sp" />
+    	</LinearLayout>
+        
+    </LinearLayout>
+
+</LinearLayout>

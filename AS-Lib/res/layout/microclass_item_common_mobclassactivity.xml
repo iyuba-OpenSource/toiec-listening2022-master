@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:roundProgress="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:baselineAligned="false"
+    android:background="@drawable/mobat_item_select" >
+    
+    <RelativeLayout 
+        android:id="@+id/RL_courseContent_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/mobat_item_select">
+        
+        <RelativeLayout 
+            android:id="@+id/RL_courseContent_play_state_pic"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp">
+            <ImageView
+	            android:id="@+id/courseContent_play_pic"
+	            android:layout_width="40dp"
+	            android:layout_height="40dp"
+	            android:background="@drawable/microclass_mobclass_course_content_play"
+	            android:scaleType="center" />
+        </RelativeLayout>
+        
+        <RelativeLayout 
+            android:id="@+id/RL_courseContent_download_state_pic"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:visibility="invisible">
+            <ImageView
+	            android:id="@+id/courseContent_download_pic"
+	            android:layout_width="40dp"
+	            android:layout_height="40dp"
+	            android:background="@drawable/microclass_mobclass_course_content_download"
+	            android:scaleType="center" />
+        </RelativeLayout>
+        
+        <RelativeLayout 
+            android:id="@+id/RL_courseContent_buy_state_pic"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp">
+            <ImageView
+	            android:id="@+id/courseContent_buy_pic"
+	            android:layout_width="40dp"
+	            android:layout_height="40dp"
+	            android:background="@drawable/microclass_mobclass_course_content_buy"
+	            android:scaleType="center" />
+        </RelativeLayout>
+        
+        <RelativeLayout 
+            android:id="@+id/RL_courseContent_roundProgressBar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:visibility="invisible">
+            <com.iyuba.core.common.widget.RoundProgressBar
+	            android:id="@+id/roundProgressBar"
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent"
+	            roundProgress:circleColor="#f6bd5b"
+	            roundProgress:circleProgressColor="#22b289"
+	            roundProgress:circleWidth="6dip"
+	            roundProgress:textColor="#22b289" />
+        </RelativeLayout>
+        
+        <RelativeLayout 
+	        android:id="@+id/RL_courseContent_list_image"
+	        android:layout_width="fill_parent"
+	        android:layout_height="60dp"
+	        android:layout_centerVertical="true"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginTop="15dp"
+	        android:layout_marginRight="10dp"
+	        android:layout_marginBottom="15dp"
+	        android:layout_toRightOf="@id/RL_courseContent_buy_state_pic">
+	        
+            <ImageView
+	            android:id="@+id/courseContent_lock_pic"
+	            android:layout_width="15dp"
+	            android:layout_height="20dp"
+				android:layout_alignParentRight="true"
+	            android:layout_centerVertical="true"
+	            android:layout_marginRight="15dp"
+	            android:background="@drawable/microclass_mobclass_course_content_lock"
+	            android:scaleType="center" />
+            
+	        <TextView 
+	            android:id="@+id/courseCotent_title"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:layout_marginLeft="15dp"
+	            android:layout_alignParentLeft="true"
+	            android:layout_toLeftOf="@id/courseContent_lock_pic"
+	            android:singleLine="true" 
+				android:ellipsize="middle" 
+	            android:text="课程标题"
+	            android:textSize="18sp"
+	            android:textColor="@color/course_content_title"/>
+	        
+	    </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

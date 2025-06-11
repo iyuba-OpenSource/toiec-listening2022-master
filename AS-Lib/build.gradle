@@ -1,0 +1,339 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.mob.sdk'
+
+MobSDK {
+    appKey "1bf0126d663c5"
+    appSecret "b1701bd733609e44604aed1dbb60ea3e"
+    SMSSDK {}
+    SecVerify {}
+    ShareSDK {
+        loopShare true
+        devInfo {
+            Wechat {
+                appId "wx4868b35061f87885"
+                appSecret "64020361b8ec4c99936c0e3999a9f249"
+                userName "gh_afb25ac019c9"
+                path "pages/index/index.html?id=1"
+                withShareTicket true
+                miniprogramType 2
+            }
+            WechatMoments {
+                appId "wx4868b35061f87885"
+                appSecret "64020361b8ec4c99936c0e3999a9f249"
+            }
+            WechatFavorite {
+                appId "wx189fde5f93808eba"
+                appSecret "a48764db049301bc3d137d75f35e9784"
+            }
+            QQ {
+                appId "101740087"
+                appKey "2f4e9206b08538e5b279a5e33a26e946"
+            }
+            QZone {
+                appId "101740087"
+                appKey "2f4e9206b08538e5b279a5e33a26e946"
+            }
+            SinaWeibo {
+                appKey "3550862881"
+                appSecret "b1cba787ce49df2e46a344a54c2cc0c3"
+                callbackUri "http://www.sharesdk.cn"
+            }
+        }
+    }
+}
+
+android {
+
+    namespace 'com.iyuba.core'
+
+   /* signingConfigs {
+        iyuba {
+            storeFile file('D:\\2_Office\\1_Projects\\1_ASProjects\\Iyuba\\iyuba_android.keystore')
+            storePassword 'buaaiyuba'
+            keyPassword 'buaaiyuba'
+            keyAlias 'android.keystore'
+        }
+    }*/
+
+    useLibrary 'org.apache.http.legacy'
+    compileSdk 34
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 31
+    }
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+            jniLibs.srcDirs = ['libs']
+        }
+
+//        // Move the tests to tests/java, tests/res, etc...
+//        androidTest.setRoot('tests')
+//
+//        // Move the build types to build-types/<type>
+//        // For instance, build-types/debug/java, build-types/debug/AndroidManifest.xml, ...
+//        // This moves them out of them default location under src/<type>/... which would
+//        // conflict with src/ being used by the main source set.
+//        // Adding new build types or product flavors should be accompanied
+//        // by a similar customization.
+//        debug.setRoot('build-types/debug')
+//        release.setRoot('build-types/release')
+    }
+/*    buildTypes {
+        release {
+            signingConfig signingConfigs.iyuba
+        }
+        debug {
+            signingConfig signingConfigs.iyuba
+        }
+    }*/
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+        disable 'MissingTranslation'
+    }
+    buildFeatures {
+        renderScript true
+        aidl true
+    }
+
+}
+
+
+dependencies {
+
+    api fileTree(include: ['*.jar', '*.so'], dir: 'libs')
+
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+
+    api project(':MultiThreadDownloader')
+    api project(':HeadNewsLib')
+    api project(':wheel')
+
+    //友盟
+    // 友盟基础组件库（所有友盟业务SDK都依赖基础组件库
+    api 'com.umeng.umsdk:common:+'// 必选
+    api 'com.umeng.umsdk:asms:+'// 必选
+    api 'com.umeng.umsdk:uyumao:+'
+    // 高级运营分析功能依赖库，使用U-App卸载分析、开启反作弊能力请务必集成。common需搭配v9.6.3及以上版本，asms需搭配v1.7.0及以上版本。需更新隐私声明。
+    api 'com.umeng.umsdk:apm:+'// U-APM产品包依赖，必选
+
+    api 'androidx.multidex:multidex:2.0.1'
+    api 'com.github.traex.rippleeffect:library:1.3'
+    api 'com.balysv:material-ripple:1.0.2'
+    api 'com.pnikosis:materialish-progress:1.7'
+    api 'com.facebook.stetho:stetho:1.3.1'
+    api 'com.facebook.stetho:stetho-okhttp:1.1.0'
+    api 'org.litepal.android:core:1.3.1'
+    //支付宝sdk
+    api 'com.alipay.sdk:alipaysdk-android:+@aar'
+    api 'com.android.volley:volley:1.1.0'
+    api project(':configationForJlpt1')
+
+    //带箭头的dialog
+    api 'com.github.xujiaji:happy-bubble:1.0.1'
+
+    /*通用对话框*/
+    api 'me.drakeet.materialdialog:library:1.3.1'
+
+    final PERMISSION_DISPATCHER_VERSION = "$rootProject.ext.permissionDispatcherVersion"
+    final SUPPORT_LIBRARY_VERSION = "28.0.0"// "$rootProject.ext.supportLibraryVersion"
+    final RETROFIT_VERSION = "$rootProject.ext.retrofitVersion"
+    final OKHTTP_VERSION = "$rootProject.ext.okhttpVersion"
+
+    api 'androidx.appcompat:appcompat:1.4.2'
+    api 'com.google.android.material:material:1.6.1'
+    api 'androidx.annotation:annotation:1.0.0'
+    api 'androidx.cardview:cardview:1.0.0'
+    api 'androidx.constraintlayout:constraintlayout:2.1.4'
+    api 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    api 'androidx.viewpager2:viewpager2:1.1.0-alpha01'
+
+    compileOnly("com.squareup.retrofit2:converter-gson:$RETROFIT_VERSION") {
+        exclude group: 'com.google.code.gson'
+    }
+    api "com.daimajia.swipelayout:library:1.2.0@aar"
+
+    api "com.iyuba.dlex:dlex:$rootProject.ext.dlexVersion"
+    api(name: 'mvp-1.0.0', ext: 'aar')
+
+
+    api(name: 'MediaPlayer-4.4.1', ext: 'aar')
+    implementation(name: 'commonres-1.2.0', ext: 'aar')
+    api(name: 'commonvar-1.0.0', ext: 'aar')
+
+    //更换头条模块
+    api(name: 'headlinelibrary-1.7.9', ext: 'aar')
+    api(name: 'headlinetalk-1.3.7', ext: 'aar')
+    api(name: 'headlinesearch-1.3.1', ext: 'aar')
+    api(name: 'imagetextview-1.2.1', ext: 'aar')
+    api(name: 'roundprogressbar-1.0.0', ext: 'aar')
+    api(name: 'waitdialog-1.2.1', ext: 'aar')
+    api(name: 'popmenu-0.2.2', ext: 'aar')
+    implementation 'com.github.linger1216:labelview:v1.1.2'
+
+    api(name: 'intelligence-1.3.3', ext: 'aar')
+
+    api(name: 'iyubamovies-1.2.9', ext: 'aar')
+    api(name: 'adbrowser-1.0.1', ext: 'aar')
+    api(name: 'image_selector', ext: 'aar')
+
+    api 'com.isseiaoki:simplecropview:1.0.13'
+
+    api(name: 'basicfavor-1.2.8-alpha01', ext: 'aar') //收藏模块
+    api(name: 'basicdl-1.2.3-alpha01', ext: 'aar') //下载模块
+
+    api(name: 'recycler-0.2.0', ext: 'aar')
+    api(name: 'vpager-0.1.0', ext: 'aar')
+    api(name: 'resize-1.0.0', ext: 'aar')
+    api(name: 'share-mob-0.1.3', ext: 'aar')
+
+    api(name: 'player-1.2.8', ext: 'aar')
+    api(name: 'player-exo-1.2.8-alpha01', ext: 'aar')
+//    api(name: 'ijkplayer-java-0.8.8-modify', ext: 'aar')
+//    api(name: 'ijkplayer-armv7a-0.8.8-modify', ext: 'aar')
+//    api(name: 'ijkplayer-arm64-0.8.8-modify', ext: 'aar')
+//    api(name: 'ijkplayer-x86-0.8.8-modify', ext: 'aar')
+//    api(name: 'ijkplayer-x86_64-0.8.8-modify', ext: 'aar')
+
+    api(name: 'textpage-1.2.1', ext: 'aar')
+    api(name: 'exomedia-4.3.0-modify', ext: 'aar')
+    api(name: 'player-extended-1.2.8', ext: 'aar')
+
+    api(name: 'progresswheel-1.0.1', ext: 'aar')
+    api "de.hdodenhof:circleimageview:$rootProject.ext.circleImageVersion"
+    api "com.scwang.smartrefresh:SmartRefreshLayout:$rootProject.ext.smartRefreshVersion"
+    api "com.jakewharton.timber:timber:$rootProject.ext.timberVersion"
+    api "com.youth.banner:banner:$rootProject.ext.bannerVersion"
+    api(name: 'subtitle-1.2.2', ext: 'aar')
+    api(name: 'mse-0.2.7', ext: 'aar')
+    api(name: 'aactrans-0.2.0', ext: 'aar')
+    api(name: 'amrtrans-0.2.0', ext: 'aar')
+    api(name: 'parse-0.2.4', ext: 'aar')
+    api(name: 'wavtrans-0.2.0', ext: 'aar')
+
+
+    api "com.github.hotchemi:permissionsdispatcher:$PERMISSION_DISPATCHER_VERSION"
+    annotationProcessor "com.github.hotchemi:permissionsdispatcher-processor:$PERMISSION_DISPATCHER_VERSION"
+
+    //retrofit2库的相关模块
+    api "com.squareup.retrofit2:retrofit:$RETROFIT_VERSION"
+    api "com.squareup.retrofit2:converter-gson:$RETROFIT_VERSION"
+    api "com.squareup.retrofit2:adapter-rxjava:$RETROFIT_VERSION"
+    api("com.squareup.retrofit2:converter-simplexml:$RETROFIT_VERSION") {
+        exclude group: 'xpp3', module: 'xpp3'
+        exclude group: 'stax', module: 'stax-api'
+        exclude group: 'stax', module: 'stax'
+    }
+    api "com.squareup.retrofit2:adapter-rxjava2:$RETROFIT_VERSION"
+    api "io.reactivex.rxjava2:rxandroid:$rootProject.ext.rxandroidVersion"
+    api "io.reactivex.rxjava2:rxjava:$rootProject.ext.rxjavaVersion"
+
+    //okhttp3的相关模块
+    api "com.squareup.okhttp3:okhttp:$OKHTTP_VERSION"
+    api "com.squareup.okhttp3:logging-interceptor:$OKHTTP_VERSION"
+    api "org.greenrobot:eventbus:$rootProject.ext.eventBusVersion"
+    api "com.github.bumptech.glide:glide:$rootProject.ext.glideVersion"
+
+    api(name: 'youdaosdk_4.2.45', ext: 'aar')
+
+    api(name: 'data-iyuba-0.2.0-fix2', ext: 'aar')
+    api(name: 'data-ydsdk-0.3.9-fix2', ext: 'aar')
+    api(name: 'data-youdao-0.1.8-fix2', ext: 'aar')
+    api(name: 'sdk-0.3.9', ext: 'aar')
+
+    api "com.github.AnthonyFermin:DropDownView:$rootProject.ext.dropDownViewVersion"
+    api 'com.flyco.roundview:FlycoRoundView_Lib:1.1.4@aar'
+    api 'com.weigan:loopView:0.1.2'
+
+    api(name: 'user-0.2.7', ext: 'aar')
+
+    api(name: 'mixed_converter-1.2.1', ext: 'aar')
+
+    api(name: 'creator-1.0.0', ext: 'aar')
+
+    api "com.youth.banner:banner:1.4.10"
+    api(name: 'adblocker-1.0.2', ext: 'aar')
+    api(name: 'sonic-1.0.1', ext: 'aar')
+    api(name: 'mp3trans-0.2.0', ext: 'aar')
+
+    api 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:5.1.6'
+
+    //增加替换个人中心时缺少的模块
+    implementation 'jp.wasabeef:glide-transformations:4.3.0'
+
+    //更换个人中心模块
+    api(name: 'personalhomelibrary-1.5.8', ext: 'aar')
+    api(name: 'share-0.1.3', ext: 'aar')
+    api(name: 'privacy-1.0.4', ext: 'aar')
+    implementation 'com.github.linger1216:labelview:v1.1.2'
+
+//    //增加上传图片所需模块
+    api(name: 'fileuploader-1.2.1', ext: 'aar')
+//
+//    //增加上传视频所需模块
+    api(name: 'videocompressor-1.0', ext: 'aar')
+//
+//    //微课
+    api(name: 'imooclib-1.7.0', ext: 'aar')
+//
+//    //进度条
+    api 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0'
+
+    api "com.scwang.smartrefresh:SmartRefreshLayout:$rootProject.ext.smartRefreshVersion"
+
+    implementation 'com.github.chrisbanes:PhotoView:2.0.0'
+    //结合新包使用
+    implementation 'com.github.naman14:TAndroidLame:1.1'
+    implementation "com.h6ah4i.android.widget.verticalseekbar:verticalseekbar:1.0.0"
+    api('com.google.android.exoplayer:exoplayer-core:2.19.1') {
+        exclude(group: 'androidx.core', module: 'core')
+    }
+
+    //有道智选需要
+    api "com.airbnb.android:lottie:5.2.0"
+
+
+    //广告
+    api(name: 'mediatom-0.3.9-fix', ext: 'aar')
+    api(name: 'ydsdk-0.3.9-fix', ext: 'aar')
+
+    //头条
+    api(name: 'mediatom-tt-adapt-0.3.9-fix4', ext: 'aar')
+    api(name: 'open_ad_sdk_6.4.1.6', ext: 'aar')
+    api 'com.jakewharton.timber:timber:4.7.1'
+    //倍孜
+    api(name: 'mediatom-adhub-adapt-0.3.9', ext: 'aar')
+    api(name: 'beizi_ad_sdk_3.5.0.9', ext: 'aar')
+    api(name: 'beizi_fusion_sdk_4.90.4.11', ext: 'aar')
+    //百度广告
+    api(name: 'mediatom-bd-adapt-0.3.9-fix', ext: 'aar')
+    api(name: 'Baidu_MobAds_SDK-release_v9.35', ext: 'aar')
+    //快手广告
+    api(name: 'mediatom-ks-adapt-0.3.9', ext: 'aar')
+    api(name: 'kssdk-ad-3.3.63-publishRelease-085cdfe109', ext: 'aar')
+    //腾讯广告
+    api(name: 'mediatom-tx-adapt-0.3.9-fix2', ext: 'aar')
+    api(name: 'GDTSDK.unionNormal.4.602.1472', ext: 'aar')
+
+    api(name: 'oaid_sdk_2.5.1', ext: 'aar')
+
+    api(name: 'mixnative-0.3.9-fix3', ext: 'aar')
+    api(name: 's2s-0.3.9', ext: 'aar')
+}

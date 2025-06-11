@@ -1,0 +1,20 @@
+<resources>
+
+    <string name="app_name">托业听力</string>
+    <string name="server_error">与服务器连接异常，请稍后再试</string>
+    <string name="network_ungeilivable">网络不给力</string>
+    
+    <string name="discover_headline">英语头条</string>
+    
+    <!-- headline -->
+    <string name="pulldown">下拉刷新</string>
+    <string name="pulldown_refreshing">正在刷新</string>
+    <string name="pulldown_release">松开刷新数据</string>
+    <string name="pullup">上拉加载</string>
+    <string name="pullup_loading">正在加载</string>
+    <string name="pullup_release">松开加载更多</string>
+    <string name="latestdata_hint">已是最新数据</string>
+    <string name="nomoredata_hint">没有更多数据</string>
+    <string name="lastupdatetime_label">最近更新：</string>
+
+</resources>

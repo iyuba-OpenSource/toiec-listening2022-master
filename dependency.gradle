@@ -1,0 +1,36 @@
+project.ext {
+
+    minSdkVersion = 19
+    supportLibraryVersion = '28.0.0'
+
+    retrofitVersion = '2.11.0'
+    okhttpVersion = '3.10.0'
+    rxandroidVersion = '2.1.0'
+    rxjavaVersion = '2.2.3'
+    glideVersion = '4.12.0'
+    eventBusVersion = '3.0.0'
+    permissionDispatcherVersion = '3.0.1'
+    timberVersion = '4.7.1'
+    ijkVersion = '0.8.8-modify@aar'
+
+    subtitleVersion = '1.0.7'
+    dlexVersion = '1.0.2'
+    playerVersion = '1.2.5'
+    recyclerVersion = '0.0.3'
+    youdaoSdkVersion = '3.10.3'
+    mobShareVersion = '3.0.0'
+    mobSmsVersion = '3.0.0'
+    mobToolsVersion = '2017.0608.1618'
+    circleImageVersion = '2.2.0'
+    smartRefreshVersion = '1.1.0'//1.0.3
+    bannerVersion = '1.4.10'
+
+    mvpVersion = '1.0.0'
+    toolboxVersion = '1.0.2'
+
+    iflytekVersion = "2.0.1018.1013"
+
+    iyubaADVersion="0.1.2"
+    dropDownViewVersion = '1.0.1'
+
+}

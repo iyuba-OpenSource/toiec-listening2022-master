@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sen_index_bkg"
+        android:paddingRight="25dp"
+        android:paddingBottom="18dp">
+
+        <TextView
+            android:id="@+id/tv_index"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="6dp"
+            android:text="123"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_sen_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+        android:text="Like many people, Bree Britt once Dreamed of starting her own bussness.Like many people, Bree Britt once Dreamed of starting her own bussness."
+        android:textColor="#7A665C"
+        android:textSize="16sp" />
+
+    <View
+        android:id="@+id/v_10"
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:layout_below="@id/tv_sen_text" />
+
+    <LinearLayout
+        android:id="@+id/ll_choose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/v_10"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/sep_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="30dp"
+            android:background="#E6E6E6" />
+
+        <LinearLayout
+            android:id="@+id/bottom_view"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:clickable="false"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <com.iyuba.core.common.widget.RoundProgressBar
+                    android:id="@+id/rpb_sen_play"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/sen_play"
+                    android:clickable="true"
+                    android:padding="2dp"
+                    app:circleColor="#ffffff"
+                    app:circleProgressColor="@color/blue"
+                    app:circleWidth="2dp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="@drawable/sen_read_backborder"
+                android:visibility="visible">
+
+                <com.iyuba.core.common.widget.RoundProgressBar
+                    android:id="@+id/rpb_sen_i_read"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/sen_i_read"
+                    android:clickable="true"
+                    app:circleColor="#ffffff"
+                    app:circleProgressColor="@color/blue"
+                    app:circleWidth="2dp" />
+
+                <FrameLayout
+                    android:id="@+id/sen_read_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:clickable="true">
+
+                    <ImageView
+                        android:id="@+id/iv_sen_read_play"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:padding="8dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/sen_read_play2" />
+
+                    <com.iyuba.core.common.widget.RoundProgressBar
+                        android:id="@+id/sen_read_playing"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/sen_stop"
+                        android:visibility="gone"
+                        app:circleColor="#ffffff"
+                        app:circleProgressColor="@color/blue"
+                        app:circleWidth="2dp" />
+                </FrameLayout>
+
+                <ImageView
+                    android:id="@+id/iv_sen_read_send"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:clickable="true"
+                    android:padding="3dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/sen_read_send" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1.5"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/tv_correct"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/ic_word_correct"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/iv_sen_read_collect"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/share_press"
+                    android:clickable="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/sen_read_result"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

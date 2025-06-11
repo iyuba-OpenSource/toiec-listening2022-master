@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/com.iyuba.core"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff" >
+
+    <RelativeLayout
+        android:id="@+id/title_part"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary" >
+
+        
+        <TextView 
+            android:id="@+id/tv_select_ques_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="@string/select_ques_type"
+            android:textColor="#ffffff"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tv_teacher_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/techer_tang"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/tinsert"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/edt_question" />
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:id="@+id/ll_queslist_mainbody"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/title_part" >
+        
+        <com.handmark.pulltorefresh.library.PullToRefreshListView 
+  	        android:id="@+id/ptr_question_list"
+        	android:layout_width="fill_parent"
+        	android:layout_height="fill_parent"
+        	android:layout_below="@+id/RL_top_sliding"
+        	android:cacheColorHint="#00000000"
+            android:divider="#e1e1e1"
+            android:dividerHeight="11dp"
+            android:fadingEdge="none"
+            android:fastScrollEnabled="false"
+            android:listSelector="@drawable/item_select" 
+        	app:effect="tilt"
+      		app:only_animate_new_items="false"
+      		app:only_animate_fling="false"
+      		app:max_velocity="0"/>
+
+    </FrameLayout>
+
+    <LinearLayout 
+        android:id="@+id/ll_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="10dp"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+        
+    </LinearLayout>
+    
+    <com.iyuba.core.common.widget.ContextMenu
+        android:id="@+id/context_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</RelativeLayout>

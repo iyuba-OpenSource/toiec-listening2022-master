@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:versionCode="20"
+    android:versionName="3.1.0411">
+
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- 允许程序录制声音通过手机或耳机的麦克风 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--    <uses-permission android:name="android.permission.CALL_PHONE" />-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- 允许程序振动 -->
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" /> <!-- 允许程序禁用键盘锁 -->
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 允许程序显示系统窗口 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- 允许程序在手机屏幕关闭后后台进程仍然运行 -->
+    <uses-permission android:name="android.permission.REORDER_TASKS" /> <!-- 允许程序重新排序系统Z轴运行中的任务 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+        </intent>
+
+        <package android:name="com.tencent.mm" /> <!-- // 指定微信包名 -->
+
+        <package android:name="com.tencent.mobileqq" />
+    </queries>
+
+    <!-- icon_72 -->
+    <!--        android:theme="@style/AppTheme.Base"-->
+
+    <application
+        android:name=".ToeicApplication"
+        android:allowBackup="true"
+        android:allowNativeHeapPointerTagging="false"
+        android:icon="@drawable/ic_lanucher_toeic"
+        android:label="托业听力"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:theme="@style/AppThemeAppCompat"
+        tools:replace="android:name,android:label,android:icon,android:theme,android:allowBackup,android:networkSecurityConfig">
+
+        <!-- 适配9.0网络请求 -->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="@string/umeng_appkey" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="@string/umeng_channel_normal" />
+
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="托业听力"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeAppCompat" />
+        <!-- AppThemeAppCompat -->
+        <activity
+            android:name=".activity.PrepareActivity"
+            android:exported="true"
+            android:label="托业听力">
+            <!--
+                        <intent-filter>
+                            <action android:name="android.intent.action.MAIN" />
+
+                            <category android:name="android.intent.category.LAUNCHER" />
+                        </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".activity.IniActivity"
+            android:label="托业听力">
+
+        </activity>
+        <activity
+            android:name=".activity.TestActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.TitleBaseActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.NewWordsBookActivity" />
+        <activity android:name=".activity.CollectedQuestionsActivity" />
+        <activity android:name=".activity.InformationActivity" />
+        <activity android:name=".activity.InfoListActivity" />
+        <!--        <activity android:name=".activity.LoginActivity" />-->
+        <activity android:name=".activity.AllAppActivity" />
+        <activity android:name=".activity.BuyVipActivity" />
+        <activity android:name=".activity.DeleteDataActivity" />
+        <!--        <activity android:name=".activity.ExerciseModeActivity" />-->
+        <!--        <activity android:name=".activity.FeedBackActivity" />-->
+        <activity android:name=".activity.HelpUseActivity" />
+        <!--        <activity android:name=".activity.PersonHomeActivity" />-->
+        <activity android:name=".activity.RegistActivity" />
+        <activity android:name=".activity.RegistByMobileActivity" />
+        <activity android:name=".activity.SetUserNameAndPsActivity" />
+        <activity android:name=".activity.ThemeActivity" />
+        <!--        <activity android:name=".activity.UpLoadImageActivity" />-->
+        <activity
+            android:name="com.iyuba.core.discover.activity.FindFriendListActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.teacher.activity.ExerciseModeActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait" />
+
+        <!-- 发现 -->
+        <activity
+            android:name="com.iyuba.core.discover.activity.DiscoverForAt"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.discover.activity.news.AudioPlayer"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait" />
+        <!-- 应用天地 视频播放类 -->
+        <activity
+            android:name="com.iyuba.core.discover.activity.news.VideoPlayerNew"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeAppCompat" />
+        <activity
+            android:name="com.iyuba.headnewslib.HeadlineActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.discover.activity.AppGround"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.common.activity.Web"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:label="托业听力"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.discover.activity.SearchWordActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.discover.activity.Saying"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.discover.activity.WordCollection"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait" />
+        <!-- 新单词本 -->
+        <activity
+            android:name=".activity.WordCollectionNew"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeAppCompat" />
+        <activity
+            android:name="com.iyuba.core.teacher.activity.FindTeacherActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.discover.activity.FriendCircFreshListActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.discover.activity.SearchFriend"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.common.activity.LoginActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.youdao.sdk.common.YouDaoBrowser"
+            android:configChanges="keyboardHidden|orientation"
+            tools:replace="android:configChanges" />
+        <activity
+            android:name="com.iyuba.headnewslib.ReadActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.discover.activity.news.SimpleNews"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.discover.activity.test.SimpleTest"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <!-- 考试系列应用 -->
+        <activity
+            android:name="com.iyuba.core.discover.activity.test.SimpleTestSub"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeAppCompat" />
+        <!-- 四六级填空界面 -->
+        <activity
+            android:name="com.iyuba.core.discover.activity.test.CetBlank"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeAppCompat" />
+        <activity
+            android:name="com.iyuba.core.discover.activity.test.CET"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeAppCompat" />
+        <activity
+            android:name="com.iyuba.core.discover.activity.test.CetOriginal"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeAppCompat" />
+        <activity
+            android:name="com.iyuba.core.discover.activity.test.CetSubmit"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeAppCompat" />
+        <activity
+            android:name="com.iyuba.core.discover.activity.test.CetExplain"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeAppCompat" />
+        <activity
+            android:name="com.iyuba.core.discover.activity.test.CetSingleBlank"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeAppCompat" />
+        <activity
+            android:name="com.iyuba.core.common.activity.RegistByPhoneActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.common.activity.RegisterEmailActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+
+        <!-- android:screenOrientation="portrait" -->
+
+        <!-- 微信分享回调 -->
+        <!-- tools:replace="android:value"-->
+        <activity
+            android:name="com.iyuba.toeiclistening.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            tools:replace="android:theme" />
+
+        <activity
+            android:name="com.iyuba.core.teacher.activity.TeacherBaseInfo"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.iyuba.core.teacher.activity.TeacherBaseInfo2"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.teacher.activity.TeacherBaseInfo3"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.teacher.activity.TeacherQuesListActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.me.activity.MeForAt"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.me.activity.SendBookActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeAppCompat" />
+        <activity
+            android:name="com.iyuba.core.me.activity.RankActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeAppCompat" />
+        <!-- 购买爱语币 -->
+        <activity
+            android:name="com.iyuba.core.me.pay.BuyIyubiActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait" />
+        <!-- 支付爱语币 -->
+        <activity
+            android:name="com.iyuba.core.me.pay.IyubiPayOrderActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait" />
+        <!-- 单词详情 -->
+        <activity
+            android:name="com.iyuba.core.discover.activity.WordContentActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait" />
+
+        <!-- 打卡 -->
+        <activity
+            android:name="com.iyuba.core.me.activity.SignActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.me.activity.WriteState"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.common.activity.PlaySet"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.me.activity.EditUserInfoActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.me.activity.UserDetailInfo"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.me.activity.ReplyDoing"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.me.activity.FansCenter"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.discover.activity.PublishMood"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.me.activity.NoticeCenter"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.me.activity.AttentionCenter"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.me.activity.VipCenter"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.me.activity.UpLoadImageActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait" />
+        <!--        <activity-->
+        <!--            android:name="com.iyuba.core.me.activity.PersonalHome"-->
+        <!--            android:configChanges="keyboardHidden|orientation|locale"-->
+        <!--            android:screenOrientation="portrait" />-->
+        <activity
+            android:name="com.iyuba.core.me.activity.MessageCenter"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.me.activity.Chatting"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeAppCompat" />
+        <activity
+            android:name="com.iyuba.core.me.activity.InfoFullFillActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.me.activity.IntelLearningActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.me.activity.LearnResultActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.me.activity.LevelPickActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.iyuba.core.me.activity.PersonalSignatureList"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.me.activity.ResultDetailActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.me.activity.TestDetailActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.me.activity.TestResultActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.me.activity.WordDetailActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.me.activity.WordResultActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.teacher.activity.SettingActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.DeleteAudioActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.iyuba.toeiclistening.activity.DeleteAudioActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.iyuba.core.teacher.activity.TheQuesListActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.teacher.activity.QuestionNotice"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.teacher.activity.HelpUse"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.teacher.activity.AboutActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.teacher.activity.Feedback"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.microclass.activity.DelCourseDataActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait" />
+
+        <!-- 微信支付回调 -->
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.iyuba.toeiclistening"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            tools:replace="android:theme" />
+
+        <activity
+            android:name="com.iyuba.core.common.activity.CommunityActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.teacher.activity.QuesDetailActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.teacher.activity.QuezActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.teacher.activity.SelectQuestionType"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.me.pay.PayOrderActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.common.activity.RegistSubmitActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.core.teacher.activity.ShowLargePicActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait" />
+        <!-- 广告 -->
+        <!--        <activity
+                    android:name="com.google.android.gms.ads.AdActivity"
+                    android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+                    android:theme="@android:style/Theme.Translucent" />-->
+
+        <!--        <service
+                    android:name="com.baidu.location.f"
+                    android:enabled="true"
+                    android:process=":remote" />-->
+
+        <!--        <activity android:name=".activity.forget.ForgetRequestCodeActivity" />-->
+        <!--        <activity android:name=".activity.forget.ForgetPassWordActivity" />-->
+        <activity
+            android:name="cn.sharesdk.tencent.qq.ReceiveActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1105935766" />
+            </intent-filter>
+        </activity>
+
+        <!--        <provider-->
+        <!--            android:name="android.support.v4.content.FileProvider"-->
+        <!--            android:authorities="${applicationId}.fileprovider"-->
+        <!--            android:exported="false"-->
+        <!--            android:grantUriPermissions="true">-->
+        <!--            <meta-data-->
+        <!--                android:name="android.support.FILE_PROVIDER_PATHS"-->
+        <!--                android:resource="@xml/file_paths" />-->
+        <!--        </provider>-->
+
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/network_security_config" />
+
+        <activity
+            android:name=".activity.test.TestDetailActivity"
+            android:label="@string/title_activity_test_detail"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.holder.FragmentHolderActivity" />
+        <activity android:name=".vocabulary.WordListActivity" />
+        <activity android:name=".vocabulary.WordTestActivity" />
+        <activity
+            android:name=".vocabulary.WordStudyActivity"
+            android:label="@string/title_activity_word_study_actiivty" />
+        <activity android:name=".vocabulary.WordSignActivity" />
+        <activity
+            android:name="com.iyuba.toeiclistening.MyWebActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.toeiclistening.activity.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.WELCOME">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.iyuba.toeiclistening.activity.me.MyWalletActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+
+            <intent-filter>
+                <action android:name="com.iyuba.toeiclistening.activity.me.MyWalletActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.iyuba.toeiclistening.activity.word.WordExerciseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.toeiclistening.activity.word.WordListenActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.toeiclistening.activity.word.WordSpellExerciseActivity"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="@string/file_provider_name_personal"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"
+                tools:replace="android:resource" />
+        </provider>
+
+        <!--高德地图key-->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="2da5064ff0cc61e26e410b968e07a221"
+            tools:replace="android:value" />
+        <!--A5:75:53:E2:BA:55:E8:2B:04:C1:FC:5E:4D:02:0F:3B:04:A2:D7:BE-->
+        <service android:name="com.amap.api.location.APSService" />
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            android:exported="false"
+            tools:node="remove">
+            <meta-data
+                android:name="com.iyuba.toeiclistening.AppInit"
+                android:value="androidx.startup" />
+        </provider>
+
+    </application>
+
+</manifest>

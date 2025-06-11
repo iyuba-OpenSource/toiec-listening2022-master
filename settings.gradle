@@ -1,0 +1,11 @@
+include ':toeicListening',
+        ':configationForJlpt1',
+        //':ShareSDK',
+        ':http233',
+        //':SMSSDK',
+        //':OneKeyShareNew',
+        ':wheel',
+        ':HeadNewsLib',
+        ':MultiThreadDownloader',
+        ':library',
+        ':AS-Lib'

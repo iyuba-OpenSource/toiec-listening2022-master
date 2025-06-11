@@ -1,0 +1,206 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.mob.sdk'
+
+
+import java.text.SimpleDateFormat
+
+static def releaseTime() {
+    SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+    return formatter.format(new Date())
+}
+
+
+MobSDK {
+    appKey "1bf0126d663c5"
+    appSecret "b1701bd733609e44604aed1dbb60ea3e"
+    SMSSDK {}
+    SecVerify {}
+    ShareSDK {
+        loopShare true
+        devInfo {
+            Wechat {
+                appId "wx4868b35061f87885"
+                appSecret "64020361b8ec4c99936c0e3999a9f249"
+                userName "gh_afb25ac019c9"
+                path "pages/index/index.html?id=1"
+                withShareTicket true
+                miniprogramType 2
+            }
+            WechatMoments {
+                appId "wx4868b35061f87885"
+                appSecret "64020361b8ec4c99936c0e3999a9f249"
+            }
+            WechatFavorite {
+                appId "wx189fde5f93808eba"
+                appSecret "a48764db049301bc3d137d75f35e9784"
+            }
+            QQ {
+                appId "101740087"
+                appKey "2f4e9206b08538e5b279a5e33a26e946"
+            }
+            QZone {
+                appId "101740087"
+                appKey "2f4e9206b08538e5b279a5e33a26e946"
+            }
+            SinaWeibo {
+                appKey "3550862881"
+                appSecret "b1cba787ce49df2e46a344a54c2cc0c3"
+                callbackUri "http://www.sharesdk.cn"
+            }
+        }
+    }
+}
+android {
+
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def outputFile = output.outputFile
+            def fileName
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                if (variant.buildType.name.equals('release')) {//如果是release包
+                    fileName = "toeic-${buildType.name}-${versionName}-" +
+                            "${versionCode}-${releaseTime()}.apk"
+                } else if (variant.buildType.name.equals('debug')) {//如果是debug包
+                    fileName = "toeic-${buildType.name}-${versionName}-" +
+                            "${versionCode}-${releaseTime()}.apK"
+                }
+                outputFileName = fileName
+            }
+        }
+    }
+
+    useLibrary 'org.apache.http.legacy'
+    compileSdk 34
+
+    defaultConfig {
+        minSdkVersion 23
+        targetSdkVersion 34 //rootProject.ext.targetSdkVersion
+        versionCode 30   //1104发版
+        versionName '3.10.2573'
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+        resourceConfigurations += ['zh', 'en']
+        applicationId 'com.iyuba.toeiclistening'
+
+        //spalsh广告
+        buildConfigField "String", "SPLASH_AD_KEY_CSJ", '"0107"'
+        buildConfigField "String", "SPLASH_AD_KEY_YLH", '"1063"'
+        buildConfigField "String", "SPLASH_AD_KEY_KS", '"00"'
+        buildConfigField "String", "SPLASH_AD_KEY_BD", '"1067"'
+        buildConfigField "String", "SPLASH_AD_KEY_BZ", '"0000"'
+
+        //banner广告
+        buildConfigField "String", "BANNER_AD_KEY_CSJ", '"0108"'
+        buildConfigField "String", "BANNER_AD_KEY_YLH", '"1064"'
+
+        //信息流广告
+        buildConfigField "String", "TEMPLATE_SCREEN_AD_KEY_CSJ", '"1062"'
+        buildConfigField "String", "TEMPLATE_SCREEN_AD_KEY_YLH", '"1066"'
+        buildConfigField "String", "TEMPLATE_SCREEN_AD_KEY_KS", '"0000"'
+        buildConfigField "String", "TEMPLATE_SCREEN_AD_KEY_BD", '"1069"'
+
+        //插屏广告 Interstitial
+        buildConfigField "String", "INTERSTITIAL_AD_KEY_CSJ", '"1061"'
+        buildConfigField "String", "INTERSTITIAL_AD_KEY_YLH", '"1065"'
+        buildConfigField "String", "INTERSTITIAL_AD_KEY_BD", '"1068"'
+
+
+        ndk {
+            abiFilters "arm64-v8a"
+            //"armeabi-v7a"
+            // 指定要ndk需要兼容的架构(这样其他依赖包里mips,x86,armeabi,arm-v8之类的so会被过滤掉)
+        }
+    }
+    buildFeatures {
+
+        viewBinding true
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    signingConfigs {
+        iyuba {
+            storeFile file(new File(project.rootDir, "iyuba_android.keystore"))
+            storePassword 'buaaiyuba'
+            keyAlias 'android.keystore'
+            keyPassword 'buaaiyuba'
+        }
+    }
+
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.iyuba
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+        debug {
+            signingConfig signingConfigs.iyuba
+            ext.enableCrashlytics = false
+            ext.alwaysUpdateBuildId = false
+        }
+    }
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_17
+        sourceCompatibility JavaVersion.VERSION_17
+    }
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+        disable 'MissingTranslation'
+    }
+    namespace 'com.iyuba.toeiclistening'
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+dependencies {
+    final PERMISSION_DISPATCHER_VERSION = "$rootProject.ext.permissionDispatcherVersion"
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation files('libs/pinyin4j-2.5.0.jar')
+    implementation project(':AS-Lib')
+    implementation project(':configationForJlpt1')
+    implementation "com.github.hotchemi:permissionsdispatcher:$PERMISSION_DISPATCHER_VERSION"
+    annotationProcessor "com.github.hotchemi:permissionsdispatcher-processor:$PERMISSION_DISPATCHER_VERSION"
+    //    解决包冲突-
+/*    configurations {
+        all*.exclude group: 'com.android.support', module: 'support-v4'
+    }*/
+    //带箭头的dialog
+    implementation 'com.github.xujiaji:happy-bubble:1.0.1'
+
+    implementation 'com.github.linger1216:labelview:v1.1.2'
+    implementation group: 'com.alibaba', name: 'fastjson', version: '1.2.12'
+
+//    implementation(name: 'ijkplayer-java-0.8.8-modify', ext: 'aar')
+//    implementation(name: 'ijkplayer-armv7a-0.8.8-modify', ext: 'aar')
+//    implementation(name: 'ijkplayer-arm64-0.8.8-modify', ext: 'aar')
+//    implementation(name: 'ijkplayer-x86-0.8.8-modify', ext: 'aar')
+//    implementation(name: 'ijkplayer-x86_64-0.8.8-modify', ext: 'aar')
+
+    //弹窗的框架
+    implementation 'io.github.razerdp:BasePopup:3.2.0'
+    //adapter
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.49-androidx'
+
+
+    implementation('com.github.lihangleo2:ShadowLayout:3.3.2') {
+        exclude module: 'glide'
+    }
+
+    implementation "androidx.startup:startup-runtime:1.1.1"
+}
+
+

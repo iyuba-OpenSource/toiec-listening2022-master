@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items>
+    <item
+        name="@string/all_vip_item_title_1"
+        month="1"
+        price="50"
+        productId="0"/>
+    <item
+        name="@string/all_vip_item_title_2"
+        month="6"
+        price="199"
+        productId="0"/>
+    <item
+        name="@string/all_vip_item_title_3"
+        month="12"
+        price="298"
+        productId="0"/>
+    <item
+        name="@string/all_vip_item_title_4"
+        month="36"
+        price="588"
+        productId="0"/>
+</items>

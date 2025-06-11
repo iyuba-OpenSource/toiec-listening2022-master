@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="green">#ff18c9f5</color>
+    <color name="white">#ffffffff</color>
+    <color name="pale">#b9dbdb</color>
+    <color name="orange">#ff4200</color><!-- 橘色 -->
+    <color name="grey">#f1faf5</color><!-- 浅灰 -->
+    <color name="spale">#e8eeea</color><!--深  灰-->
+    <color name="press">#94b4b3</color><!-- 按钮按下的背景颜色 -->
+    <color name="blue">#e0e287</color><!-- 蓝色 -->
+    <color name="lnk">#368800</color><!-- 墨绿色 -->
+    <color name="purple">#8e0c93</color><!-- 紫色 -->
+    <color name="red">#d30d45</color><!-- 红色 -->
+    <color name="royalblue">#4169e1</color> <!-- 钢兰色 -->
+    <color name="brown">#8B4513</color><!-- 棕色 -->
+    <color name="transparent">#00000000</color>
+    <color name="black">#000000</color><!-- 黑色 -->
+    <color name="textColorVice">#6C6C6C</color>
+
+    <color name="skyBlue">#ff2983c1</color><!-- 天空蓝 -->
+    <color name="color1">#ffb982ec</color><!-- 优雅紫 -->
+    <color name="color2">#ffea3255</color><!-- 少女红 -->
+    <color name="color3">#ff1a8e35</color><!-- 宁静绿 -->
+    <color name="color4">#ffeb6e1b</color><!-- 活力橙 -->
+    <color name="color5">#ff9c3c5c</color><!-- 经典红 -->
+    
+    <color name="background1">#fffbf1dd</color><!-- 米白 -->
+    <color name="background2">#ffc2f4c5</color><!-- 淡绿 -->
+    <color name="background3">#ffe3e4e6</color><!-- 银灰 -->
+    <color name="blank">#ff47220b</color><!-- 黑色 -->
+    <color name="border">#dcdcdc</color><!-- 边框颜色 -->
+    <color name="set_text">#465557</color><!-- 设置里面字体颜色 -->
+    <color name="app_theme_color">#67bde4</color><!-- 应用的主题颜色 -->
+    <color name="black_back">#353535</color><!-- 黑色 用作背景-->
+    <color name="grey_text">#797979</color><!-- 灰色字体 -->
+    <color name="divider">#dcdcdc</color><!--灰色背景1-->
+    <color name="grey_back2">#f0f0f0</color><!--红色 提醒-->
+    <color name="green_theme">#33cdd7</color><!--红色 提醒-->
+    <color name="red_alert">#ca4041</color><!--红色 提醒-->
+    <color name="grey_back1">#f0f1eb</color><!--红色 提醒-->
+
+
+    <color name="blue_bottom">#00BFFF</color><!--46b4c7 浅蓝色 主页底部-->
+    <color name="colorPrimary">#2D7BE3</color><!--浅蓝色 主页底部 通用颜色覆盖 0C80FF  339ef0  236496-->
+    <color name="colorPrimarySelect">#00B2EE</color><!--浅蓝色 主页底部 选中状态 4EA0FC 00B2EE 236496-->
+    <color name="colorPrimaryDark">#1267d9</color>
+
+    <color name="gray_blue">#BBDCDC</color><!--浅灰蓝色 主页列表中底部 -->
+    <color name="gray_no_download">#cccccc</color>
+
+    <color name="read_corner_stub">#4168EB</color>
+    <color name="broadcast_corner_stub">#4AA942</color>
+
+    <color name="main_tab_gray">#717171</color>
+    <color name="commont_txt">#717171</color>
+    <color name="textcolor">#333333</color>
+    <color name="bg_gray_color">#efeff4</color>
+
+
+</resources>

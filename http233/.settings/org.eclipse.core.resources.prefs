@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+encoding//src/com/iyuba/http/BaseHttpRequest.java=UTF-8
+encoding//src/com/iyuba/http/BaseHttpResponse.java=UTF-8
+encoding//src/com/iyuba/http/ErrorResponse.java=UTF-8
+encoding//src/com/iyuba/http/toolbox/BaseXMLRequest.java=UTF-8

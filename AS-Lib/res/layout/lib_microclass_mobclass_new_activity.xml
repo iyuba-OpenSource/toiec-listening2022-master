@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <RelativeLayout 
+        android:id="@+id/course_content_videowindow"
+        android:layout_width="fill_parent"
+        android:layout_height="180dp">
+        
+        <RelativeLayout 
+            android:id="@+id/RL_button_contentlist_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp">
+            <Button 
+	            android:id="@+id/button_contentlist_back"
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent"
+	            android:background="@drawable/course_contentlist_back_button"/>
+        </RelativeLayout>
+        
+        <Button
+            android:id="@+id/mobclass_button_buypack"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+			android:layout_alignParentTop="true"
+			android:layout_marginTop="10dp"
+			android:layout_marginRight="10dp"
+			android:background="#22b289"
+            android:text="购买课程"
+            android:textColor="@color/white"
+            android:textSize="14sp" 
+            android:visibility="gone"/>
+        
+        <RelativeLayout 
+            android:id="@+id/RL_audition_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="invisible">
+            <Button 
+	            android:id="@+id/button_contentlist_download"
+	            android:layout_width="60dp"
+	            android:layout_height="60dp"
+	            android:background="@drawable/contentlist_download_button"/>
+	         <TextView 
+	             android:id="@+id/tv_trylistening_download"
+	             android:layout_width="wrap_content"
+	             android:layout_height="wrap_content"
+	             android:layout_centerHorizontal="true"
+	             android:layout_below="@id/button_contentlist_download"
+	             android:text="试听下载"
+	             android:textSize="16dp"
+	             android:textColor="@color/white"/>
+        </RelativeLayout>
+        
+        <RelativeLayout 
+            android:id="@+id/RL_audition_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone">
+            <Button 
+	            android:id="@+id/button_contentlist_play"
+	            android:layout_width="60dp"
+	            android:layout_height="60dp"
+	            android:background="@drawable/contentlist_play_button"/>
+	         <TextView 
+	             android:id="@+id/tv_trylistening"
+	             android:layout_width="wrap_content"
+	             android:layout_height="wrap_content"
+	             android:layout_centerHorizontal="true"
+	             android:layout_below="@id/button_contentlist_play"
+	             android:text="试听"
+	             android:textSize="16dp"
+	             android:textColor="@color/white"/>
+        </RelativeLayout>
+        
+        <TextView
+            android:id="@+id/tv_slogan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="8dp"
+            android:layout_centerHorizontal="true"
+            android:text="中国最具影响力的在线教育平台——爱语吧"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:visibility="gone"/>
+        
+        <ProgressBar
+             android:id="@+id/audition_download_progress"
+             android:layout_width="120dp"
+             android:layout_height="8dp"
+             android:layout_below="@id/RL_audition_download"
+             style="?android:attr/progressBarStyleHorizontal"
+			 android:max="100"
+		     android:progress="0"
+			 android:layout_centerHorizontal="true"
+             android:layout_marginBottom="4dp"
+              android:visibility="invisible"/>
+        <!--  
+        <ImageView 
+            android:id="@+id/course_content_pictures"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"/>
+        -->
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/RL_ViewCountAndScore"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/course_content_videowindow">
+        <TextView 
+            android:id="@+id/tv_packname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+			android:layout_alignParentTop="true"
+			android:layout_marginTop="5dp"
+			android:layout_alignParentLeft="true"
+			android:layout_marginLeft="5dp"            
+            android:text="课程包名"
+            android:textSize="20sp"/>
+        
+        <RelativeLayout 
+            android:id="@+id/RL_viewcounts"
+            android:layout_width="fill_parent"
+            android:layout_height="20dp"
+            android:layout_below="@id/tv_packname">
+            
+            <ImageView 
+                android:id="@+id/iv_hotview"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/hot"/>
+            
+            <TextView 
+                android:id="@+id/tv_viewcounts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_hotview"
+                android:layout_marginLeft="5dp"
+                android:layout_centerVertical="true"
+                android:text="500阅"
+                android:textSize="16sp"/>
+            
+            <ImageView 
+                android:id="@+id/iv_rattingbarLine"
+                android:layout_width="2dp"
+                android:layout_height="18dp"
+                android:layout_marginLeft="3dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_viewcounts"
+                android:background="#aaaaaa"/>
+            
+            <RatingBar 
+                android:id="@+id/rb_course"
+                android:layout_width="76dp"
+    			android:layout_height="14dp"
+    			android:isIndicator="true"
+    			android:layout_centerVertical="true"
+    			android:numStars="5"
+                android:rating="5" 
+                android:stepSize="0.5"
+    			style="@style/CommentRatingBar"
+    			android:layout_marginLeft="5dp"
+    			android:layout_toRightOf="@id/iv_rattingbarLine">
+			</RatingBar>
+			
+            <TextView 
+                android:id="@+id/tv_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@id/rb_course"
+                android:layout_centerVertical="true"
+                android:text="10.0分"
+                android:textSize="14sp"
+                android:textColor="#22b289"/>
+            
+        </RelativeLayout>
+    </RelativeLayout>
+    
+    
+    
+     <ImageView
+        android:id="@+id/horizonline"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="3dp"
+        android:layout_below="@id/RL_ViewCountAndScore"
+        android:background="#dcdcdc" />
+    
+    <RelativeLayout 
+        android:id="@+id/course_content_navigatebar"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="2dp"
+        android:layout_below="@id/horizonline">
+        <LinearLayout 
+            android:id="@+id/LL_course_content_navigatebar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            
+            <RelativeLayout 
+                android:id="@+id/RL_course_button_list"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical|center_horizontal|center"
+                android:layout_weight="1"
+                android:gravity="center">
+                <TextView
+	                android:id="@+id/course_button_list"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerHorizontal="true"
+	                android:text="@string/course_list"
+	                android:textColor="@color/black"
+	                android:textSize="18sp" />
+            </RelativeLayout>
+            
+            <RelativeLayout 
+                android:id="@+id/RL_course_button_desc"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical|center_horizontal|center"
+                android:layout_weight="1"
+                android:gravity="center">
+                <TextView
+	                android:id="@+id/course_button_desc"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerHorizontal="true"
+	                android:text="@string/course_desc"
+	                android:textColor="@color/black"
+	                android:textSize="18sp" />
+            </RelativeLayout>
+            
+            <RelativeLayout 
+                android:id="@+id/RL_course_button_comment"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical|center_horizontal|center"
+                android:layout_weight="1"
+                android:gravity="center">
+                <TextView
+	                android:id="@+id/course_button_comment"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerHorizontal="true"
+	                android:text="@string/course_comment"
+	                android:textColor="@color/black"
+	                android:textSize="18sp" />
+            </RelativeLayout>>
+
+            
+        </LinearLayout>
+        
+    </RelativeLayout>
+    
+    <RelativeLayout
+       android:layout_width="fill_parent"
+       android:layout_height="match_parent"
+       android:layout_below="@+id/course_content_navigatebar" >
+		
+		<RelativeLayout
+           android:id="@+id/rl_qq_consultation"
+	       android:layout_width="fill_parent"
+	       android:layout_height="35dp"
+	       android:background="@color/white"
+	       android:layout_alignParentBottom="true">
+           <Button
+	           android:id="@+id/btn_normal_problem"
+	           android:layout_width="80dp"
+	           android:layout_height="22dp"
+	           android:layout_marginLeft="50dp"
+	           android:layout_alignParentLeft="true"
+	           android:layout_centerVertical="true"
+	           android:background="@drawable/normal_problem"/>
+           
+	       <Button
+	           android:id="@+id/btn_qq_consultation"
+	           android:layout_width="80dp"
+	           android:layout_height="22dp"
+	           android:layout_marginRight="50dp"
+	           android:layout_alignParentRight="true"
+	           android:layout_centerVertical="true"
+	           android:background="@drawable/qq_consultaition"/>
+        </RelativeLayout>
+       <androidx.viewpager.widget.ViewPager
+           android:id="@+id/mainBody"
+           android:layout_width="fill_parent"
+           android:layout_height="fill_parent"
+           android:layout_above="@id/rl_qq_consultation"
+           android:measureAllChildren="true" />
+
+    </RelativeLayout>
+    
+    <com.iyuba.core.common.widget.ContextMenu
+       android:id="@+id/context_menu"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:visibility="gone" />
+
+</RelativeLayout>

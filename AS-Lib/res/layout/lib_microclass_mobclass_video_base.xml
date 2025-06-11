@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <SurfaceView
+        android:id="@+id/surfaceVideo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+  
+  <RelativeLayout 
+        android:id="@+id/RL_course_title"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentTop="true"
+        android:background="#c4000000">
+	    
+        <RelativeLayout 
+            android:id="@+id/RL_mobClassBaseBtnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:layout_centerVertical="true">
+            <Button 
+	            android:id="@+id/mobClassBaseBtnBack"
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent"
+	            android:background="@drawable/course_contentlist_back_button"/>
+        </RelativeLayout>
+        
+        <TextView 
+            android:id="@+id/tv_mobclassBaseTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/RL_mobClassBaseBtnBack"
+            android:singleLine="true" 
+			android:ellipsize="middle"
+            android:text="当前课程的标题"
+            android:textColor="@color/white"
+            android:textSize="18sp"/>
+        
+        <RelativeLayout 
+            android:id="@+id/RL_mobClassBaseBtnChangeAudio"
+            android:layout_width="40dp"
+            android:layout_height="24dp"
+             android:layout_marginLeft="5dp"
+            android:layout_marginRight="12dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+            <Button 
+	            android:id="@+id/mobClassBaseBtnChangeAudio"
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent"
+	            android:background="@drawable/microclass_mobclass_course_content_audio"/>
+        </RelativeLayout>
+        
+        <ImageView 
+            android:id="@+id/iv_course_video_share"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/tv_mobclassBaseTitle"
+            android:src="@drawable/course_share"/>
+        
+    </RelativeLayout>
+    
+  <RelativeLayout 
+	    android:id="@+id/RL_mobclassBaseCurAllTimeAllScreen"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentTop="true"
+	    android:layout_alignParentRight="true"
+	    android:layout_marginTop="10dp"
+	    android:layout_marginRight="10dp"
+	    android:background="@drawable/cur_all_pic_time_allscreen">
+        <RelativeLayout 
+            android:id="@+id/RL_mobAllScreenTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+            <TextView 
+		     android:id="@+id/tv_mobclassBaseCurTimeAllScreen"
+		     android:layout_width="50dp" 
+		     android:layout_height="wrap_content"
+		     android:layout_centerVertical="true"
+		     android:layout_marginLeft="5dp"
+		     android:text="00:00"
+		     android:textColor="#ececec"
+		     android:textSize="16sp"/>
+	    	<TextView 
+		     android:id="@+id/tv_mobclassBaseAllTimeAllScreen"
+		     android:layout_width="60dp"
+		     android:layout_height="wrap_content"
+		     android:layout_centerVertical="true"
+		     android:layout_marginRight="5dp"
+		     android:layout_toRightOf="@id/tv_mobclassBaseCurTimeAllScreen"
+		     android:text="/00:00"
+		     android:textColor="#ececec"
+		     android:textSize="16sp"/>
+        </RelativeLayout>
+	    
+            
+    </RelativeLayout>
+
+    <RelativeLayout 
+        android:id="@+id/all_PlayBar"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true">
+        
+        <RelativeLayout
+	        android:id="@+id/title_base_relativelayout_play_control"
+	        android:layout_width="fill_parent"
+	        android:layout_height="50dp"
+	        android:layout_alignParentBottom="true"
+	        android:background="#c4000000">
+	        
+            <RelativeLayout
+                android:id="@+id/LL_Button_Play"
+	            android:layout_width="45dp"
+	            android:layout_height="45dp"
+	            android:layout_marginLeft="10dp"
+	            android:layout_centerVertical="true"
+	            android:layout_alignParentLeft="true" >
+	
+	            <Button
+	                android:id="@+id/video_play"
+	                android:layout_width="28dp"
+	                android:layout_height="30dp"
+	                android:layout_centerVertical="true"
+	                android:layout_centerHorizontal="true"
+	                android:background="@drawable/mob_pause_button" />
+            </RelativeLayout>
+            
+            <LinearLayout 
+                android:id="@+id/LL_Video_Time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+	            android:layout_centerVertical="true"
+	            android:layout_alignParentRight="true">
+                <TextView
+	                android:id="@+id/textView_curtime"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerVertical="true"
+	                android:text="00:00"
+	                android:textColor="#ececec" />
+	            
+	            <TextView
+	                android:id="@+id/textView_alltime"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerVertical="true"
+	                android:layout_marginRight="10dp"
+	                android:text="/00:00"
+	                android:textColor="#ececec" />
+            </LinearLayout>
+            
+	    	<SeekBar
+                android:id="@+id/small_seekBar_player"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="7dp"
+                android:maxHeight="7dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/LL_Video_Time"
+                android:layout_toRightOf="@id/LL_Button_Play"/>
+	    	
+	    </RelativeLayout>
+    </RelativeLayout>
+      
+    <ImageView 
+        android:id="@+id/iv_microclass_base_video_replay"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        android:background="@drawable/replay"/>
+
+</RelativeLayout>

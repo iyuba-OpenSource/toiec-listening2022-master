@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="5dp"
+            android:text="@string/test_lib"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_word"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18dp"
+            android:background="@android:color/transparent"
+            android:text="生词本"
+            android:textColor="#ffffff"
+            android:textSize="16dp"
+            android:visibility="visible"
+            tools:visibility="visible" />
+        <!--<Button-->
+        <!--android:id="@+id/test"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_marginLeft="80dp"-->
+        <!--android:background="@android:color/transparent"-->
+        <!--android:text="测试"-->
+        <!--android:textColor="#ffffff"-->
+        <!--android:textSize="16dp" />-->
+
+        <Button
+            android:id="@+id/btn_collect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="18dp"
+            android:background="@android:color/transparent"
+            android:text="收藏题目"
+            android:textColor="#ffffff"
+            android:textSize="16dp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+
+    <ListView
+        android:id="@+id/testlib_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#FAFAFA"
+        android:dividerHeight="10dp"
+        android:fadingEdge="none"
+        android:footerDividersEnabled="true"
+        android:headerDividersEnabled="true"
+        android:scrollingCache="false"
+        android:stackFromBottom="true"
+        android:visibility="gone" />
+    <!--  android:listSelector="@drawable/testlib_selector"-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_test_lib_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>

@@ -1,0 +1,62 @@
+package com.iyuba.core.common.protocol;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
+import com.iyuba.core.common.network.INetStateReceiver;
+
+public abstract class BaseJSONResponseForUploadImg implements BaseHttpResponse {
+	protected InputStream inputStream = null;
+	public String Result = "";
+	public String resultURL = "";
+
+	@Override
+	public InputStream getInputStream() {
+		// TODO Auto-generated method stub
+		return inputStream;
+	}
+
+	@Override
+	public boolean isAllowCloseInputStream() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
+	@Override
+	public ErrorResponse parseInputStream(int rspCookie,
+			BaseHttpRequest request, InputStream inputStream, int len,
+			INetStateReceiver stateReceiver) throws IOException {
+		// TODO Auto-generated method stub
+		this.inputStream = inputStream;
+		try {
+			BufferedReader br = new BufferedReader(new InputStreamReader(
+					inputStream));
+
+			StringBuffer sb = new StringBuffer();
+
+			String result = br.readLine();
+
+			while (result != null) {
+				sb.append(result);
+				result = br.readLine();
+			}
+			String json = sb.toString();
+
+			urlResult(json);
+			return null;
+		} catch (Exception e) {
+
+			e.printStackTrace();
+
+		}
+		return new ErrorResponse();
+	}
+
+	// public abstract void parseResult(JSONObject resoultsource)
+	// throws JSONException;
+
+	public abstract void urlResult(String url);
+
+}

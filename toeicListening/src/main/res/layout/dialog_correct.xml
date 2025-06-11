@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_jx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="发音解析"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_correct_word"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_jx"
+            android:layout_centerInParent="true"
+            android:text="excuse"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+            <ImageView
+                android:id="@+id/correct_close"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignBottom="@id/tv_jx"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="14dp"
+                android:src="@drawable/correct_close"/>
+
+<!--        <com.brioal.selectabletextview.SelectableTextView-->
+<!--            android:id="@+id/tv_correct_sen"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/tv_jx"-->
+<!--            android:layout_alignStart="@id/tv_jx"-->
+<!--            android:layout_marginTop="30dp"-->
+<!--            android:layout_marginEnd="14dp"-->
+<!--            android:text="Excuse me!"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="16sp" />-->
+
+        <com.iyuba.toeiclistening.widget.SelectWordTextView
+            android:id="@+id/tv_correct_sen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_jx"
+            android:layout_alignStart="@id/tv_jx"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="14dp"
+            android:text="Excuse me!"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_correct_tips1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_correct_sen"
+            android:layout_alignStart="@id/tv_jx"
+            android:layout_marginTop="20dp"
+            android:text="点击每个单词可查看发音解析"
+            android:textColor="@color/gray"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/right_pron"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_correct_tips1"
+            android:layout_alignStart="@id/tv_jx"
+            android:layout_marginTop="20dp"
+            android:text="正确发音:"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/correct_play_word"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignBottom="@id/right_pron"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/right_pron"
+            android:src="@drawable/correct_1" />
+
+        <TextView
+            android:id="@+id/user_pron"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="你的发音:"
+            android:layout_below="@id/right_pron"
+            android:layout_alignStart="@id/tv_jx"
+            android:textSize="14sp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/correct_explain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/user_pron"
+            android:layout_alignStart="@id/tv_jx"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="14dp"
+            android:text="单词释义: "
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/correct_tips2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/correct_explain"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="14dp"
+            android:background="@drawable/gradient_corners"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="再试着跟读一遍这个单词吧"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/correct_ly2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="14dp"
+            android:layout_below="@id/correct_tips2"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/correct_play_ori"
+                    android:layout_weight="1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/correct_1"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp"
+                    android:text="听原音"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/correct_rec"
+                    android:layout_weight="1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/correct_3"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:id="@+id/correct_rec_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp"
+                    android:text="点击开始"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/correct_score_ly"
+                android:visibility="invisible"
+                android:layout_width="40dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/correct_play_user"
+                    android:layout_weight="1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/correct_4"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:id="@+id/correct_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp"
+                    android:text="98"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/goto_micro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/correct_ly2"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/correct_5" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

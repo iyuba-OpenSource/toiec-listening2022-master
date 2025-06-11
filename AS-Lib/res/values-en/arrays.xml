@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="type">
+        <item>Original + analytical model</item>
+        <item>Original model</item>
+        <item>Analytical model</item>
+    </string-array>
+    <string-array name="mode">
+        <item>Single Loop</item>
+        <item>List Loop</item>
+        <item>Random</item>
+    </string-array>
+    <string-array name="gender">
+        <item>male</item>
+        <item>female</item>
+    </string-array>
+    <string-array name="more_oper">
+        <item>Share artical</item>
+        <item>Play Setting</item>
+    </string-array>
+    <string-array name="level">
+        <item>书童</item>
+        <item>童生</item>
+        <item>秀才</item>
+        <item>举人</item>
+        <item>解元</item>
+        <item>贡士</item>
+        <item>进士</item>
+        <item>探花</item>
+        <item>榜眼</item>
+        <item>状元</item>
+    </string-array>
+    <string-array name="file_op">
+        <item>rename</item>
+        <item>copy</item>
+        <item>cut</item>
+        <item>delete</item>
+        <item>info</item>
+    </string-array>
+
+    <string-array name="pay_methods">
+        <item>支付宝支付</item>
+        <item>微信支付</item>
+        <!-- <item>银行卡支付</item>-->
+    </string-array>
+
+    <string-array name="pay_methods_images">
+        <item>@drawable/pay_zhifubao_icon</item>
+        <item>@drawable/pay_weixin_icon</item>
+        <!--  <item>@drawable/pay_bankcard_icon</item>-->
+    </string-array>
+
+    <string-array name="pay_method_hints">
+        <item>推荐有支付宝账号的用户使用</item>
+        <item>推荐安装微信5.0及以上版本的使用</item>
+        <!--<item>支持储蓄卡信用卡，无需开通网银</item>-->
+    </string-array>
+
+</resources>

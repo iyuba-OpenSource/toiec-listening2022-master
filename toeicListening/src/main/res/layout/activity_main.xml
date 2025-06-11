@@ -1,0 +1,226 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+    <!-- <ViewFlipper
+         android:id="@+id/MainContainer"
+         android:layout_width="fill_parent"
+         android:layout_height="match_parent"
+         android:layout_alignParentStart="true"
+         android:layout_alignParentTop="true"
+         android:measureAllChildren="true"
+         android:layout_above="@id/NavigateMenuBar"
+         android:visibility="visible"/>-->
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/NavigateMenuBar"
+        android:overScrollMode="never"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/NavigateMenuBar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <!-- 题库 -->
+        <RelativeLayout
+            android:id="@+id/RL_Navigate_TestLib"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:id="@+id/RL_Icon_Navigate_TestLib"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_above="@id/tv_test"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:id="@+id/Icon_Navigate_TestLib"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_main_test_off" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:text="@string/test_lib"
+                android:textColor="#717171"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+
+        <!-- 资讯-->
+        <RelativeLayout
+            android:id="@+id/RL_Navigae_Information"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/RL_Icon_Navigate_Information"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_above="@id/tv_word"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:id="@+id/Icon_Navigate_Information"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:padding="1dp"
+                    android:src="@drawable/ic_main_word_off" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_word"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:text="单词"
+                android:textColor="#717171"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <!-- 视频 原来是问答 -->
+        <RelativeLayout
+            android:id="@+id/video_all"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/RL_Icon_Navigate_Words"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_above="@id/tv_video"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:id="@+id/Icon_Navigate_Words"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_main_video_off" />
+                <!-- RL_Navigate_Words friendhui-->
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:text="视频"
+                android:textColor="#717171"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+
+        <!-- 发现-->
+        <RelativeLayout
+            android:id="@+id/main_navigate_fav_word"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_above="@id/tv_discover"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:id="@+id/main_image_fav_word"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:padding="1dp"
+                    android:src="@drawable/ic_main_discover_off" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_discover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:text="发现"
+                android:textColor="#717171"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <!-- 我-->
+        <RelativeLayout
+            android:id="@+id/main_navigate_set"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_above="@id/tv_me"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:id="@+id/main_image_set"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_main_me_off" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_me"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:gravity="top"
+                android:text="我的"
+                android:textColor="#717171"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

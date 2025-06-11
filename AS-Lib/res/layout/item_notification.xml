@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:id="@+id/notificationlist_portrait"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="15dip"
+            android:scaleType="centerCrop"
+            android:src="@drawable/defaultavatar" />
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="60dip"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="30dip" >
+
+                <TextView
+                    android:id="@+id/notificationlist_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dip"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="爱语吧"
+                    android:textColor="#000000"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/notificationlist_pmnum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dip"
+                    android:gravity="center_vertical"
+                    android:text="[5]"
+                    android:textColor="#000000"
+                    android:textSize="17sp" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/notificationlist_dateline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dip"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:text="03-13 17:52"
+                    android:textColor="@color/text_gray_color" >
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="30dip"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/notificationlist_lastmessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="您好"
+                    android:textColor="@color/text_gray_color" />
+
+                <ImageView
+                    android:layout_width="15dip"
+                    android:layout_height="15dip"
+                    android:layout_margin="5dip"
+                    android:background="@drawable/go"
+                    android:focusable="false"
+                    android:gravity="center" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

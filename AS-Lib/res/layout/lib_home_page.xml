@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="今日头条"
+            android:textColor="#ffffff"
+            android:textSize="18sp"/>
+
+    </RelativeLayout>
+
+
+    <com.iyuba.core.homepage.widget.PullToRefreshLayout
+        android:id="@+id/refresh_view"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <include layout="@layout/refresh_head" />
+        <com.iyuba.core.homepage.widget.PullableScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/RL_top_sliding"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <!-- 放置轮播图片位置 -->
+                    <LinearLayout
+                        android:id="@+id/top_sliding_viewpager1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="180dp"
+                        android:layout_alignParentTop="true"
+                        android:orientation="horizontal" />
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_alignBottom="@id/top_sliding_viewpager1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:background="@drawable/heitiao">
+                        <!-- 放置图片标题的位置 -->
+                        <TextView
+                            android:id="@+id/top_news_title"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginTop="10dp"
+                            android:singleLine="true"
+                            android:textColor="#F6F6F6"
+                            android:textSize="10dp"/>
+                        <!-- 放置图片中选中点的位置 -->
+                        <LinearLayout
+                            android:id="@+id/dots_ll_ongoing1"
+                            android:layout_below="@+id/top_news_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="5dp"/>
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/voac_more"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#ecebeb">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center_vertical"
+                        android:text="VOA慢速英语"
+                        android:textColor="@color/lightsteelblue"
+                        android:layout_marginLeft="6dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="6dp"
+                        android:text="更多>>"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/lightsteelblue"/>
+                </RelativeLayout>
+
+
+                <com.iyuba.core.homepage.widget.ListViewNoScroll
+                    android:id="@+id/voac_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </com.iyuba.core.homepage.widget.ListViewNoScroll>
+
+
+                <RelativeLayout
+                    android:id="@+id/bbc_more"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#ecebeb">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center_vertical"
+                        android:text="BBC英语"
+                        android:textColor="@color/lightsteelblue"
+                        android:layout_marginLeft="6dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="6dp"
+                        android:text="更多>>"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/lightsteelblue"/>
+                </RelativeLayout>
+
+                <com.iyuba.core.homepage.widget.ListViewNoScroll
+                    android:id="@+id/bbc_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </com.iyuba.core.homepage.widget.ListViewNoScroll>
+
+                <RelativeLayout
+                    android:id="@+id/song_more"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#ecebeb">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center_vertical"
+                        android:text="听歌学英语"
+                        android:textColor="@color/lightsteelblue"
+                        android:layout_marginLeft="6dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="6dp"
+                        android:text="更多>>"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/lightsteelblue"/>
+                </RelativeLayout>
+
+                <com.iyuba.core.homepage.widget.ListViewNoScroll
+                    android:id="@+id/song_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </com.iyuba.core.homepage.widget.ListViewNoScroll>
+
+                <RelativeLayout
+                    android:id="@+id/head_news_more"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#ecebeb">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center_vertical"
+                        android:text="英语头条"
+                        android:textColor="@color/lightsteelblue"
+                        android:layout_marginLeft="6dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="6dp"
+                        android:text="更多>>"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/lightsteelblue"/>
+                </RelativeLayout>
+
+                <com.iyuba.core.homepage.widget.ListViewNoScroll
+                    android:id="@+id/head_news_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </com.iyuba.core.homepage.widget.ListViewNoScroll>
+
+
+                <RelativeLayout
+                    android:id="@+id/voan_more"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#ecebeb">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center_vertical"
+                        android:text="VOA常速英语"
+                        android:textColor="@color/lightsteelblue"
+                        android:layout_marginLeft="6dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="6dp"
+                        android:text="更多>>"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/lightsteelblue"/>
+                </RelativeLayout>
+
+                <com.iyuba.core.homepage.widget.ListViewNoScroll
+                    android:id="@+id/voan_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </com.iyuba.core.homepage.widget.ListViewNoScroll>
+            </LinearLayout>
+        </com.iyuba.core.homepage.widget.PullableScrollView>
+    </com.iyuba.core.homepage.widget.PullToRefreshLayout>
+</LinearLayout>

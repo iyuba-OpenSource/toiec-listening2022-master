@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:background="@drawable/item_select">
+
+    <ImageView
+        android:id="@+id/replylist_portrait"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:layout_margin="5dip"
+        android:scaleType="centerCrop"
+        android:src="@drawable/defaultavatar" />
+
+    <LinearLayout
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/replylist_note"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_margin="5dip"
+            android:layout_weight="1"
+            android:text="爱语吧 在状态中回复了你 "
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/replylist_dateline"
+            android:layout_width="fill_parent"
+            android:layout_height="30dip"
+            android:layout_marginLeft="5dip"
+            android:gravity="center_vertical"
+            android:text="03-26 08:55"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+</LinearLayout>

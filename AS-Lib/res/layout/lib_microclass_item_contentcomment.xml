@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto" 
+    xmlns:app="http://schemas.android.com/apk/res-auto" 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="#e6e6e6"
+    android:descendantFocusability="blocksDescendants" >
+
+     <com.iyuba.core.common.widget.circularimageview.CircularImageView
+        android:id="@+id/comment_image"
+        android:layout_width="@dimen/comment_imagesize"
+        android:layout_height="@dimen/comment_imagesize"
+        app:border_thickness="2dp"
+        app:border_outside_color="#dcdcdc"
+        app:border_inside_color="#ffffff"
+        android:src="@drawable/defaultavatar"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/comment_image"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="用户名"
+        android:textColor="@color/black"
+        android:textSize="18sp"/>
+
+    <RatingBar 
+        android:id="@+id/rb_userscoring"
+        android:layout_width="76dp"
+		android:layout_height="14dp"
+		android:layout_marginTop="7dp"
+		android:layout_alignParentRight="true"
+		android:isIndicator="true"
+		android:numStars="5"
+        android:rating="4" 
+        android:stepSize="0.5"
+		style="@style/CommentRatingBar"
+		android:layout_marginRight="5dp">
+	</RatingBar>
+    
+    <TextView
+        android:id="@+id/comment_time"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_toLeftOf="@id/rb_userscoring"
+        android:layout_alignParentTop="true"
+        android:layout_alignBottom="@id/user_name"
+        android:layout_marginRight="6dp"
+        android:text="评论时间"
+        android:gravity="center_vertical"
+        android:textColor="@color/black" />
+    
+    <TextView 
+        android:id="@+id/comment_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_name"
+        android:layout_toRightOf="@id/comment_image"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:text="这是评论的内容！"
+        android:textSize="14sp"
+        android:textColor="@color/black"/>
+    
+</RelativeLayout>

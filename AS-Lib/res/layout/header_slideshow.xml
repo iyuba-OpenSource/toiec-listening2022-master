@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:orientation="vertical" >
+    <!--  
+    <com.iyuba.iyumicroclass.widget.SlideShowView
+        android:id="@+id/headerSlideshowView"
+        android:layout_width="fill_parent"
+        android:layout_height="180dp"
+        android:layout_centerHorizontal="true" 
+        android:soundEffectsEnabled="false"
+        android:keepScreenOn="true"
+        android:background="#000"
+        android:fadingEdgeLength="0.0dp"/>
+	
+	
+	<android.support.v4.view.ViewPager
+        android:id="@+id/headerSlideshowView"
+        android:layout_width="fill_parent"
+        android:layout_height="180dp"
+        android:layout_centerHorizontal="true" 
+        android:soundEffectsEnabled="false"
+        android:keepScreenOn="true"
+        android:background="#ffffff"
+        android:fadingEdgeLength="0.0dp"/>
+	
+	-->
+	
+	<androidx.viewpager.widget.ViewPager
+        android:id="@+id/headerSlideshowView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout android:id="@+id/dotLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="8dp"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/v_dot1"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@drawable/dot_focus" />
+
+        <View
+            android:id="@+id/v_dot2"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/dot_blur" />
+
+    </LinearLayout>
+	
+	
+</RelativeLayout>

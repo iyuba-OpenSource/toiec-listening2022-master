@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+     <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="35dip"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/searchbox"
+            android:id="@+id/rl">
+            <Button
+                android:id="@+id/search_icon"
+                android:layout_width="27dip"
+                android:layout_height="27dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/searchicon"
+                />
+            <EditText
+                android:id="@+id/search_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/search_icon"
+                android:background="#00000000"
+                android:hint="在 好友 中搜索..."
+                android:imeOptions="actionSend"
+                android:singleLine="true"
+                android:textColor="#0e497b" />
+     </RelativeLayout>
+     <ListView 
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:id="@+id/list"
+         android:layout_below="@id/rl"
+         android:dividerHeight="1dp"
+         android:divider="@color/divider"/>
+</RelativeLayout>

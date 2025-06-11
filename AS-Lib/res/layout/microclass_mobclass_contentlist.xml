@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    
+    <RelativeLayout 
+        android:id="@+id/RL_contentlist"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#e6e6e6">
+        <ImageView 
+	        android:id="@+id/bg_contentlist"
+	        android:layout_width="3dp"
+	        android:layout_height="fill_parent"
+	        android:layout_marginLeft="15dp"
+	        android:background="@drawable/microclass_contentlist_line"/>
+        	<com.iyuba.core.common.widget.pulltorefresh.PullToRefreshViewHeader
+	            android:id="@+id/ptr_course_content"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:orientation="vertical" >
+				    <ExpandableListView
+				        android:id="@+id/el_coursecontent_list"
+				        android:layout_width="match_parent"
+				        android:layout_height="wrap_content"
+				        android:listSelector="@android:color/transparent"
+				        android:divider="#888888"
+			            android:dividerHeight="0px"
+				        android:groupIndicator="@null"
+				        android:fadingEdge="none">
+				    </ExpandableListView>
+		    </com.iyuba.core.common.widget.pulltorefresh.PullToRefreshViewHeader>
+    </RelativeLayout>
+		    
+</RelativeLayout>

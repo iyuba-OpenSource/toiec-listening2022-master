@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tback"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#66000000"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/tcontent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+      
+        <LinearLayout
+            android:id="@+id/tcancle_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="@drawable/shape_context_panel_background"
+            android:orientation="vertical" >
+         <TextView  
+       		  android:layout_width="fill_parent"  
+      		  android:layout_height="wrap_content"  
+       		  android:text="问题类型" />  
+       		  
+	       <Spinner  
+	        android:id="@+id/qt1"  
+	        android:layout_width="fill_parent"  
+	        android:layout_height="wrap_content"
+	        android:entries = "@array/q_type"
+	         /> 
+	         
+	      <Spinner  
+	        android:id="@+id/qt2"  
+	        android:layout_width="fill_parent"  
+	        android:layout_height="wrap_content"
+	        android:entries = "@array/q_type2"
+	         />  
+	        
+            <TextView
+                android:id="@+id/tcancle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/alert_btn_cancel"
+                android:textColor="@color/app_color"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

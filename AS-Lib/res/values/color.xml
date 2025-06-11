@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 黄绿色 -->
+    <color name="light_blue">#add8e6</color>
+
+    <color name="skyBlue">#ff2983c1</color><!-- 天空蓝 -->
+
+    <color name="colorPrimary">#2D7BE3</color><!--浅蓝色 主页底部 通用颜色覆盖 #0C80FF-->
+
+    <color name="vip_select">#FDDA94</color>
+    <color name="vip_toolbar">#EBC77E</color>
+    <color name="line">#ffd3dde6</color>
+    <color name="item_select_color">#b2d3f4</color>
+    <color name="text_light_gray_color">#999999</color>
+    <color name="light_red">#fd8b77</color>
+    <color name="new_gray">#e6e6e6</color>
+    <color name="gray_white">#3cf4f2f2</color>
+
+
+    <color name="course_content_title">#4d5d5f</color>
+
+    <!-- 移动课堂课程标题颜色 -->
+
+    <color name="course_content_title_bottom">#e4e7e7</color>
+
+
+    <color name="griditems_bg">#ffe8ecef</color>
+    <color name="commo_text_color">#ff333333</color>
+
+    <!-- 筛选中的灰色 -->
+    <color name="selectgray">#ced3d3</color>
+    <!-- 深灰色 -->
+    <color name="deepgray">#e1e1e1</color>
+    <!-- 知乎蓝色 -->
+    <color name="zhihublue">#0077d5</color>
+    <!-- 个人空间黄色 -->
+    <color name="personyellow">#fffc00</color>
+
+    <color name="default_white">#FAFAFA</color>
+</resources>

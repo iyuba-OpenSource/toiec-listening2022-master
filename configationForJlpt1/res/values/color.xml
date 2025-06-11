@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 应用基调颜色 -->
+    <color name="app_color">#fa8a63</color>
+    <!-- 文字选中高亮颜色 本颜色为淡蓝色 -->
+    <color name="text_highlight">#2983c1</color>
+    <!-- 大段叙述文字颜色 本颜色为灰色 -->
+    <color name="text_gray_color">#808080</color>
+    <!-- 背景色 -->
+    <color name="item_select_color">#b2d3f4</color>
+    <!-- item选中色 -->
+    <color name="background_color">#ffffff</color>
+    <!-- layout 黑色 -->
+    <color name="layout_color">#373236</color>
+    <!-- 特殊用途 听歌主界面淡灰色 -->
+    <color name="text_light_gray_color">#999999</color>
+    
+    <!-- 微课中用到的部分颜色 -->
+    <color name="course_green">#22b289</color>
+    
+    <color name="new_gray">#e6e6e6</color>
+    
+    <color name="gray_white">#3cf4f2f2</color>
+    
+    <color name="light_red">#fd8b77</color>
+
+    <color name="course_content_title">#4d5d5f</color>
+      
+    <!-- 移动课堂课程标题颜色 -->
+    
+    <color name="course_content_title_bottom">#e4e7e7</color>
+    
+    
+    <color name="griditems_bg">#ffe8ecef</color>
+    <color name="commo_text_color">#ff333333</color>
+
+    <!-- 筛选中的灰色 -->
+    <color name="selectgray">#ced3d3</color>
+    <!-- 深灰色 -->
+    <color name="deepgray">#e1e1e1</color>
+    <!-- 知乎蓝色 -->
+    <color name="zhihublue">#0077d5</color>
+    <!-- 个人空间黄色 -->
+    <color name="personyellow">#fffc00</color>
+
+    <color name="default_white">#FAFAFA</color>
+</resources>

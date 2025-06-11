@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+	<string
+		name="proName"
+	>SurfingNearby_Android</string>
+	<string
+		name="proVer"
+	>v2.5.0.0.120116_Android</string>
+	<string
+		name="minName"
+	>SurfingNearby</string>
+	<string
+		name="minVer"
+	>2.0</string>
+	<string
+		name="pubDate"
+	>20120116</string>
+	<string
+		name="runEnv_name"
+	>Android</string>
+	<string
+		name="runEnv_vendor"
+	>google</string>
+	<string
+		name="runEnv_MIDP"
+	>2.0</string>
+	<string
+		name="runEnv_CLDC"
+	>1.1</string>
+	<string
+		name="language"
+	>Chinese</string>
+	<string
+		name="PRODUCTID"
+	>HandBeside_an</string>
+	<string
+		name="APK_NAME"
+	>SurfingNearby.apk</string>
+	<string
+		name="ssite_code"
+	>10</string>
+</resources>

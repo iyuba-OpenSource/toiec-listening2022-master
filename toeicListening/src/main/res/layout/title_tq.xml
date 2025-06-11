@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/RL_Title_Text_Bar"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:background="@drawable/text_title" />
+
+    <RelativeLayout
+        android:id="@+id/RL_Title_TQ_T"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6">
+
+        <com.iyuba.toeiclistening.widget.subtitle.SubtitleSynViewMain
+            android:id="@+id/title_tq_textpage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RL_Title_Question_Bar"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:background="@drawable/question_title" />
+
+    <RelativeLayout
+        android:id="@+id/RL_Title_TQ_Q"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15"
+        android:paddingTop="5dp">
+
+        <ListView
+            android:id="@+id/title_tq_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="#dcdcdc"
+            android:dividerHeight="1dp"
+            android:fadingEdge="none"
+            android:scrollingCache="false" />
+    </RelativeLayout>
+
+</LinearLayout>

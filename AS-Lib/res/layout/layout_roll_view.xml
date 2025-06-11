@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <RelativeLayout 
+        android:id="@+id/RL_top_sliding"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        
+        <!-- 放置轮播图片位置 -->
+	    <LinearLayout
+	        android:id="@+id/top_sliding_viewpager"
+	        android:layout_width="fill_parent"
+	        android:layout_height="180dp"
+	        android:layout_alignParentTop="true"
+	        android:orientation="horizontal" />
+	
+	    <RelativeLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="30dp"
+	        android:layout_alignBottom="@id/top_sliding_viewpager"
+	        android:orientation="horizontal"
+			android:background="@drawable/rollviewpager_title_bg">
+			<!-- 放置图片中选中点的位置 -->
+		    <LinearLayout
+		        android:id="@+id/dots_ll_ongoing"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+				android:layout_marginBottom="3dp"
+				android:layout_alignParentRight="true"
+		        android:layout_alignParentBottom="true"
+		        android:orientation="horizontal"/>
+
+			<!-- 放置图片标题的位置 -->
+			<TextView
+				android:id="@+id/top_news_title"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="图片标题"
+				android:layout_toLeftOf="@id/dots_ll_ongoing"
+				android:layout_marginRight="8dp"
+				android:layout_marginLeft="5dp"
+				android:layout_marginBottom="5dp"
+				android:layout_alignParentBottom="true"
+				android:singleLine="true"
+				android:ellipsize="end"
+				android:textSize="12sp"
+				android:textColor="#F6F6F6"/>
+		</RelativeLayout>
+		
+	    
+    </RelativeLayout>
+
+</RelativeLayout>

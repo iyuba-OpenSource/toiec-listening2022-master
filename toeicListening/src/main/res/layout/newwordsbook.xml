@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <RelativeLayout 
+        android:id="@+id/RL_New_Words_Book_Title"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary">
+        <TextView 
+            android:id="@+id/text_new_words_book_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/new_words_book"
+            android:layout_centerInParent="true"
+            style="@style/TitleText"/>
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/main_back_button" />
+
+
+        <!--<Button-->
+            <!--android:id="@+id/new_words_book_synchro"-->
+            <!--android:layout_width="55dp"-->
+            <!--android:layout_height="35dp"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:background="@drawable/button_them_bg"-->
+            <!--android:text="@string/synchro"-->
+            <!--style="@style/ButtonText"/>-->
+        <Button 
+            android:id="@+id/new_words_book_delete"
+            android:layout_width="55dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button_them_bg"
+            android:text="@string/delete"
+            style="@style/ButtonText"/>
+    </RelativeLayout>
+    <ListView 
+        android:id="@+id/new_words_book_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/RL_New_Words_Book_Title"
+        android:dividerHeight="1dp"/>
+</RelativeLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RL_Test_In"
+    android:layout_width="fill_parent"
+    android:layout_height="65dp"
+    android:background="@drawable/test_list_background">
+
+    <RelativeLayout
+        android:id="@+id/RL_Test"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true">
+        <TextView
+            android:id="@+id/tv_text_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PART 1"
+            android:textSize="16sp"
+            android:textColor="#ff0000"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            />
+        <TextView
+            android:id="@+id/test_in_title_name"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:ellipsize="middle"
+            android:gravity="center_horizontal"
+            android:singleLine="true"
+            android:text="@string/text1"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:id="@+id/test_in_title_cond"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_below="@id/test_in_title_name"
+            android:layout_centerHorizontal="true"
+            android:text="@string/text2"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+</RelativeLayout>
